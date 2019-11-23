@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import Destinations from "./Components/Destinations";
-import ViewAll from "./Components/ViewAll";
+import Nabvar from "./Components/Navbar";
+import Destinations from "./Pages/Destinations";
+import ViewAll from "./Pages/ViewAll";
 
 const Home = () => {
   return  <div className="leland">
@@ -12,20 +13,31 @@ const Home = () => {
           </div>
 }
 
+const About = () => {
+  return  <div className="leland">
+            <div className="valign-wrapper callout">
+              <h2>About</h2>
+            </div>
+          </div>
+}
+
+const Contact = () => {
+  return  <div className="lelanau">
+            <div className="valign-wrapper callout">
+              <h2>Contact us</h2>
+            </div>
+          </div>
+}
+
 function App() {
   return (
     <Router>
-      <h1>Header</h1>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/all-rentals">Destinations</Link>
-        <Link to="/destinations">All Rentals</Link>
-      </div>
+      <Nabvar />
       <Route exact path="/" component={Home} />
       <Route exact path="/all-rentals" component={ViewAll} />
       <Route exact path="/destinations" component={Destinations} />
-      {/* <Route path="/about" component={About} /> */}
-      {/* <Route path="/contact" component={Contact} /> */}
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
       <h1>footer</h1>
     </Router>
   );

@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .leland {
   background-image: url(/assets/images/Leland.jpg);
   width: 100%;
@@ -17,4 +13,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.lelanau {
+  background-image: url(/assets/images/NorthLakeLeelanau.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
