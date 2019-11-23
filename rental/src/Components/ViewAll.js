@@ -1,14 +1,15 @@
-import React, {Component} from "react";
+import React from "react";
 
 const ViewAll = (props) => {
    
 
         return(
             <div className="row">
-                   This is all the cottages 
+                <div className="col s6 offset-s6">
+                   <h2>This is all the cottages</h2> 
+                </div>
             </div>
         )
-    
     } 
 
 export default ViewAll
