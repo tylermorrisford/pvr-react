@@ -1,23 +1,14 @@
 import React, {Component} from "react";
 
-class ViewByLocation extends Component{
-    constructor(){
-        super();
-    
-    }
+const ViewByLocation = (props) => {
 
-    
 
-    render() {
         return(
             <div className="row">
                    Here's cottages split up by location
             </div>
         )
     }
-    } 
-
-
-
-
+    
+    
 export default ViewByLocation

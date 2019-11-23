@@ -1,23 +1,14 @@
 import React, {Component} from "react";
 
-class ViewAll extends Component{
-    constructor(){
-        super();
-    
-    }
+const ViewAll = (props) => {
+   
 
-    
-
-    render() {
         return(
             <div className="row">
                    This is all the cottages 
             </div>
         )
-    }
+    
     } 
-
-
-
 
 export default ViewAll
