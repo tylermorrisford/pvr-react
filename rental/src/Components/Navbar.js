@@ -5,7 +5,7 @@ import "./Navbar.css";
 const Navbar = () => {
     return(
         <div className="navbar-fixed">
-        <nav className="transparent">
+        <nav className="white">
             <div className="nav-wrapper">
                 <NavLink exact to="/" class="brand-logo"><img alt="logo" src="/assets/images/pvr-logo2.png" /></NavLink>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
