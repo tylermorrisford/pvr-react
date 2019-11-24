@@ -7,3 +7,6 @@ nav .active {
     color: #555555;
 }
 
+nav {
+    overflow: hidden;
+}
