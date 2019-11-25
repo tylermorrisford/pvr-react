@@ -2,7 +2,7 @@ import React from "react";
 import cottages from "../Components/cottages";
 import Card from "../Components/Card";
 
-const ViewAll = (props) => {
+const ViewAll = () => {
 
         let allCottages = cottages.map((cottage,i) => (
             <Card key={i} data={cottage} />
@@ -11,7 +11,7 @@ const ViewAll = (props) => {
         return(
             <div className="container">
                 <h3>All Rentals</h3>
-                <div className="row">
+                <div className="row flex-container">
                 {allCottages}
                 </div>
             </div>

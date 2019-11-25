@@ -3,10 +3,11 @@ import React from "react";
 const Wrapper = (props) => {
 
         return(
-            
-                <div className="row">
-            
+            <div className="container">
+                <div className="row flex-container">
+                    {props.children}
                 </div>
+            </div>
             
         )
 

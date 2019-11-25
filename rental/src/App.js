@@ -23,7 +23,7 @@ const About = () => {
 }
 
 const Contact = () => {
-  return  <div className="lelanau">
+  return  <div className="leelanau">
             <div className="valign-wrapper callout">
               <h2>Contact us</h2>
             </div>
