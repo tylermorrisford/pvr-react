@@ -1,0 +1,105 @@
+const cottages = [
+    {
+        cottageId: 1,
+        cottageName: "Cedarwood",
+        cottageLocation: "Leland",
+        cottageImage: "/assets/images/cardPhotos/cedarwood-card.jpg",
+        cottagePerNight: 719,
+        cottagePerWeek: 5000,
+        cottageSleeps: 8,
+        cottageSlug: "Magical Leland summer home sleeps 8",
+        cottageDescription: "Cedarwood is an enchanting and unique Leland summer home sided in Cedar Shake and trimmed in white and green. It boasts 4 bedrooms and 2.5 baths. Beautiful Lake Michigan is just steps from the house and can be viewed from decks and screened in porches on the lakeside of this 2500 square foot residence. Comfortable leather furniture provides comfortable seating in the living room that boasts a fireplace. Art and books can be found throughout this one-of-kind summer living experience. Stroll to Fishtown, enjoy a walk around the marina, bike to the store or enjoy a meal in several nearby restaurants. Grab a cocktail and enjoy the sunset from the screened in porch. This is truly a taste of paradise!",
+        cottageBedrooms: 4,
+        cottageBathrooms: 3,
+        cottageAmenities: [],
+        cottagePets: false
+    },
+    {
+        cottageId: 2,
+        cottageName: "Holly's House",
+        cottageLocation: "Leland",
+        cottageImage: "/assets/images/cardPhotos/holly-card.jpg",
+        cottagePerNight: 245,
+        cottagePerWeek: 1750,
+        cottageSleeps: 4,
+        cottageSlug: "Charming cottage in the heart of Leland",
+        cottageDescription: "This charming two bedroom, one bath cottage sits in the heart of Leland. It was built sometime between 1895 and 1904 and is a potential Michigan Historical Site. Completely updated in 2016 and 2017, it boasts all new stainless steel appliances; a gas stove, a side-by-side refrigerator, a dishwasher, and microwave. The first floor laundry has a matching washer and dryer. Both the kitchen and the bathroom have been totally rebuilt. The living room is warmed by a cozy fireplace and features a book case wall. In the backyard, a separate out building houses a well lit screened in porch with comfortable furniture and a table for dinner for eight. An outdoor grill and fire pit add the finishing touches to a fabulous vacation get-a-way! This well appointed historic home has exceptionally large lot. It is two blocks to downtown Leland. This is the perfect vacation location for two couples or a family of four.",
+        cottageBedrooms: 2,
+        cottageBathrooms: 1,
+        cottageAmenities: [],
+        cottagePets: false
+    },
+    {
+        cottageId: 3,
+        cottageName: "Maria's Sunset Shore",
+        cottageLocation: "Lake Leelanau",
+        cottagePerNight: 464,
+        cottagePerWeek: 3200,
+        cottageSleeps: 8,
+        cottageSlug: "Your own private beach on South Lake Leelanau",
+        cottageDescription: "Located 25 minutes from the Sleeping Bear Sand Dunes and National Lake Shore Park that was voted The Most Beautiful Place in America in 2011, this summer home is roomy, clean, comfortable, well equipped, well maintained and unique. A second floor balcony surrounds the first floor on three sides creating a two-story great room with a beautiful stone wall fireplace. The house is designed so that the lake is visible from most of the first floor rooms; the living and dining rooms, the master bedroom and the kitchen. Rooms on the second floor open to the balcony which also allows great water views. Most of the bedrooms have new beds and mattresses. To check outdoor amenities, just slide open the door wall in the dining room, move to the porch and down to the lawn, then sink tired feet into the sand on the beach before testing the lake water with its firm, sandy bottom. The lake is shallow a good distance out making this a great area for supervising children’s summer fun. \nThere is a dock and a mooring station to which you can moor your boat. It could also be a great place to soak up the warm sun and dangle toes in the water. \nLazy days in the sun, swimming, fishing, and boating move to evenings by the fire watching the sunset. This is the perfect setting to enjoy family time, to relax, to laugh and to play together. Secluded on a private road, you are centrally located to explore the many attractions that surround you. Create your summer memories at Maria’s Sunset Shore.",
+        cottageBedrooms: 4,
+        cottageBathrooms: 2,
+        cottageAmenities: [],
+        cottagePets: false
+    },
+    {
+        cottageId: 4,
+        cottageName: "Lake Michigan Delight",
+        cottageLocation: "Lake Leelanau",
+        cottagePerNight: 593,
+        cottagePerWeek: 5950,
+        cottageSleeps: 14,
+        cottageSlug: "Sleeps up to 14 on Lake Michigan",
+        cottageDescription: "Recently stained and painted inside and out, this house is well maintained and very comfortable. ‘Lake Michigan Delight’ was designed by architect Bob Lange to follow the topography of the land and face the panoramic view of Good Harbor Bay. Lake Michigan, North and South Manitou Islands, Pyramid Point and Whaleback can be seen from every room (except two bathrooms) in the house through its oversized sliding doors and picture windows that fill the lake side of this contemporary home. \nEnjoy morning coffee on the deck off the living room. Feel the beat of waves hitting the beach and listen to the the music of the birds overhead. Far out in the bay, you might catch a glimpse of a long Great Lakes freighter as it moves between North and South Manitou Islands. \nLater in the morning, follow the steps to the deck on the beach. Relax in a beach lounge, read a good book, take a refreshing dip in the cool waters of Lake Michigan, or stroll along the water’s edge and search the sand for Michigan Bluestone or the better-known Petoskey stones. \n Afterwards, take a short trip to Leland’s Fishtown to buy some whitefish, stop at a road side stand to pick up locally grown fruits and vegetables and choose a bottle of wine from one of the nearby wineries. \nAfter a delicious dinner created from local food cooked on the grill, enjoy a sunset from the dining room, the deck off the living room or down on the beach. A campfire and roasted marshmallows end a day that will delight everyone in your group.",
+        cottageBedrooms: 5,
+        cottageBathrooms: 4,
+        cottageAmenities: [],
+        cottagePets: false
+    },
+    {
+        cottageId: 5,
+        cottageName: "The Maples",
+        cottageLocation: "Northport",
+        cottagePerNight: 173,
+        cottagePerWeek: 2000,
+        cottageSleeps: 6,
+        cottageSlug: "Cozy Northport cottage sleeps 6",
+        cottageDescription: "Open the front door and walk into a roomy bright great room with a high ceilings, The floors in this remodeled little 2 bedroom gem are made of maple. The rocking chairs on the porch invite guests to spend the lazy days of summer looking at all the lovely gardens and mature maple trees in the neighborhood. The first bedroom has twin beds, the second bedroom a queen bed and a queen sofa hide-away is also available. The cottage feeling of the house is accented with white wicker. There is a charcoal grill and wifi. A short walk takes you downtown to shops, restaurants, a grocery store, bakery, bowling alley and the marina.",
+        cottageBedrooms: 2,
+        cottageBathrooms: 1,
+        cottageAmenities: [],
+        cottagePets: false
+    },
+    {
+        cottageId: 6,
+        cottageName: "The Otherside",
+        cottageLocation: "Leland",
+        cottagePerNight: 243,
+        cottagePerWeek: 2000,
+        cottageSleeps: 6,
+        cottageSlug: "2 bedroom, 2 bathroom cottage in historic Fishtown with great views of working shanties",
+        cottageDescription: "“The Otherside” offers the very unique experience of staying in a beautifully renovated cottage, once a shanty of Fishtown. \nStep out on the dock to watch the fishing boats and the boats of The Manitou Island Transit coming and going on the river. Watch the tourists on the other side of the river going in and out of the Fishtown’s “shanty” shops. Meander through all the shops and restaurants in town. Walk to Van’s Beach on Lake Michigan or North Beach on the other side of the river. \nOriginally built in early 1900 and remodeled by the Carlson brothers around 2000, this comfortable, well furnished, wood paneled, 2 bedroom, 2 bathroom cottage has a long history which guests can learn about when they visit us for a week. This unique opportunity to spend a week or more in a one-of-a-kind property is offered through the Fishtown Preservation Society of Leland. It can sleep up to 6 people.",
+        cottageBedrooms: 2,
+        cottageBathrooms: 2,
+        cottageAmenities: [],
+        cottagePets: false
+    },
+    {
+        cottageId: 7,
+        cottageName: "The Little Bridge Cottage",
+        cottageLocation: "Lake Leelanau",
+        cottagePerNight: 313,
+        cottagePerWeek: 2100,
+        cottageSleeps: 6,
+        cottageSlug: "2 bedrooms, 1.5 baths cottage enjoys spectacular sunsets over the water!",
+        cottageDescription: "New to the renting market!! The new owners have completely renovated this darling cottage: new flooring, new kitchen cabinets, new appliances, new granite counter tops, new paint, new flatscreen TV and new beds and furniture. There is a grill, outdoor furniture, a dock and a fire pit for your enjoyment and use. Cable TV and internet are also available! Wall air-conditioner on floor with bedrooms! \n This is the perfect and a very affordable location for a get-away for a small family or 2 or 3 couples!",
+        cottageBedrooms: 2,
+        cottageBathrooms: 1.5,
+        cottageAmenities: [],
+        cottagePets: false
+    }
+]
+
+export default cottages
+// hard code check-in and check-out times

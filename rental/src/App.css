@@ -23,3 +23,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.cottage-title {
+  font-weight: bolder;
+}

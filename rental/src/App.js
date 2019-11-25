@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import Nabvar from "./Components/Navbar";
 import Destinations from "./Pages/Destinations";
 import ViewAll from "./Pages/ViewAll";
+
 
 const Home = () => {
   return  <div className="leland">
@@ -29,7 +30,7 @@ const Contact = () => {
           </div>
 }
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Nabvar />

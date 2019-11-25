@@ -1,15 +1,22 @@
 import React from "react";
+import cottages from "../Components/cottages";
+import Card from "../Components/Card";
 
 const ViewAll = (props) => {
-   
+
+        let allCottages = cottages.map((cottage,i) => (
+            <Card key={i} data={cottage} />
+            ))
 
         return(
-            <div className="row">
-                <div className="col s6 offset-s6">
-                   <h2>This is all the cottages</h2> 
+            <div className="container">
+                <h3>All Rentals</h3>
+                <div className="row">
+                {allCottages}
                 </div>
             </div>
         )
-    } 
+    
+}
 
-export default ViewAll
+export default ViewAll;
