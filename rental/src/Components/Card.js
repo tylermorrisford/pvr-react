@@ -11,7 +11,7 @@ const Card = (props) => {
           </div>
           <div className="card-content">
             <p>{props.data.cottageSlug}</p><br/>
-            <p>Sleeps: {props.data.cottageSleeps} | Location: {props.data.cottageLocation}</p>
+            <p>Sleeps {props.data.cottageSleeps} in {props.data.cottageLocation}</p>
           </div>
           <div className="card-action card-link">
             <p>View More > </p>
@@ -19,6 +19,6 @@ const Card = (props) => {
         </div>
       </div>
     )
-}
+} // use price per night instead of sleeps/location
 
 export default Card
