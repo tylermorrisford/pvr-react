@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../Components/Card";
 import cottages from "../Components/cottages";
 
-const Destinations = () => {
+const Destinations = () => {  // split this component into five, add to drop-down from nav menu
 
     // Leland
 let leland = cottages.filter(el => el.cottageLocation === "Leland" );

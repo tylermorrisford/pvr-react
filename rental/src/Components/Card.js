@@ -19,6 +19,6 @@ const Card = (props) => {
         </div>
       </div>
     )
-} // use price per night instead of sleeps/location
+} // use Link to load CottagePage based on {props.data.cottageId}
 
 export default Card
