@@ -11,7 +11,7 @@ const Card = (props) => {
           </div>
           <div className="card-content">
             <p>{props.data.cottageSlug}</p><br/>
-            <p>Sleeps {props.data.cottageSleeps} in {props.data.cottageLocation}</p>
+            <p>${props.data.cottagePerNight}/night</p>
           </div>
           <div className="card-action card-link">
             <p>View More > </p>
