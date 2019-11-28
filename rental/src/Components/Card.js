@@ -19,6 +19,6 @@ const Card = (props) => {
         </div>
       </div>
     )
-} // use Link to load CottagePage based on {props.data.cottageId}
+} // use Link to load CottagePage based on {props.data.cottageId}; use wk 20 # 11 as base
 
 export default Card
