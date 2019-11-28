@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Nabvar from "./Components/Navbar";
 import Destinations from "./Pages/Destinations";
 import ViewAll from "./Pages/ViewAll";
+import NoMatch from "./Pages/NoMatch";
 
 
 const Home = () => {
@@ -34,11 +35,14 @@ const App = () => {
   return (
     <Router>
       <Nabvar />
+      <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/all-rentals" component={ViewAll} />
       <Route exact path="/destinations" component={Destinations} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route component={NoMatch} />
+      </Switch>
       <h1>footer</h1>
     </Router>
   );
