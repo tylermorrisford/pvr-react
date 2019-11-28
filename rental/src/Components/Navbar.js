@@ -13,6 +13,7 @@ const Navbar = () => {
                     <li><NavLink className="nav-links" to="/all-rentals">All Rentals</NavLink></li>
                     <li><NavLink className="nav-links" to="/about">About</NavLink></li>
                     <li><NavLink className="nav-links" to="/contact">Contact</NavLink></li>
+                    {/* add route to="/cottage/:id" */}
                 </ul>
             </div>
         </nav>
