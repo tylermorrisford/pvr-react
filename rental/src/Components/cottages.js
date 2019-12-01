@@ -12,7 +12,8 @@ const cottages = [
         cottageBedrooms: 4,
         cottageBathrooms: 3,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 2,
@@ -27,7 +28,8 @@ const cottages = [
         cottageBedrooms: 2,
         cottageBathrooms: 1,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 3,
@@ -42,7 +44,8 @@ const cottages = [
         cottageBedrooms: 4,
         cottageBathrooms: 2,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 4,
@@ -57,7 +60,8 @@ const cottages = [
         cottageBedrooms: 5,
         cottageBathrooms: 4,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 5,
@@ -72,7 +76,8 @@ const cottages = [
         cottageBedrooms: 2,
         cottageBathrooms: 1,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 6,
@@ -87,7 +92,8 @@ const cottages = [
         cottageBedrooms: 2,
         cottageBathrooms: 2,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 7,
@@ -102,97 +108,104 @@ const cottages = [
         cottageBedrooms: 2,
         cottageBathrooms: 1.5,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 8,
         cottageName: "Ryan's Way",
         cottageLocation: "Lake Leelanau",
         cottageImage: "/assets/images/cardPhotos/bridge-card.jpg",
-        cottagePerNight: 313,
-        cottagePerWeek: 2100,
-        cottageSleeps: 6,
-        cottageSlug: "2 bedrooms, 1.5 baths cottage enjoys spectacular sunsets over the water!",
-        cottageDescription: "New to the renting market!! The new owners have completely renovated this darling cottage: new flooring, new kitchen cabinets, new appliances, new granite counter tops, new paint, new flatscreen TV and new beds and furniture. There is a grill, outdoor furniture, a dock and a fire pit for your enjoyment and use. Cable TV and internet are also available! Wall air-conditioner on floor with bedrooms! \n This is the perfect and a very affordable location for a get-away for a small family or 2 or 3 couples!",
-        cottageBedrooms: 2,
-        cottageBathrooms: 1.5,
+        cottagePerNight: 450,
+        cottagePerWeek: 3200,
+        cottageSleeps: 8,
+        cottageSlug: "Lake Leelanau gem sleeps 8",
+        cottageDescription: "Ryan’s Way Cottage offers guests 2 sleeping areas. First, there are two nicely appointed bedrooms in the cottage one with a queen and one with a full bed. The finished room above the detached garage offers 4 single beds dormitory style with a futon, closet space, TV and bathroom. It has A/C. This would be a great gathering place for younger guests. The cottage sits on a large lot. There is plenty of space for your group to gather around the two available fire pits, one on the lakeside, the other more protected from the wind in the backyard. There is a large enough yard to set up group games on the lawn. The waterfront has a dock, and a sandy, hard bottom, great for swimming. A charcoal grill and outdoor furnishings offer guests a wonderful outdoor space. Families can also rent boats of your choice nearby or bring their own, as there is a buoy out in front of the cottage.",
+        cottageBedrooms: 3,
+        cottageBathrooms: 2,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 9,
-        cottageName: "The Little Bridge Cottage",
-        cottageLocation: "Lake Leelanau",
+        cottageName: "Leland Lake Life",
+        cottageLocation: "Lake Michigan",
         cottageImage: "/assets/images/cardPhotos/bridge-card.jpg",
-        cottagePerNight: 313,
-        cottagePerWeek: 2100,
-        cottageSleeps: 6,
-        cottageSlug: "2 bedrooms, 1.5 baths cottage enjoys spectacular sunsets over the water!",
-        cottageDescription: "New to the renting market!! The new owners have completely renovated this darling cottage: new flooring, new kitchen cabinets, new appliances, new granite counter tops, new paint, new flatscreen TV and new beds and furniture. There is a grill, outdoor furniture, a dock and a fire pit for your enjoyment and use. Cable TV and internet are also available! Wall air-conditioner on floor with bedrooms! \n This is the perfect and a very affordable location for a get-away for a small family or 2 or 3 couples!",
+        cottagePerNight: 450,
+        cottagePerWeek: 3850,
+        cottageSleeps: 8,
+        cottageSlug: "Experience Leland and Lake Life on Lake Michigan",
+        cottageDescription: "Located on a quiet, private drive Leland Lake Life (#LelandLakeLife) is a 3 bathroom, 2 bathroom house that sleeps 8. The house is located on Good Harbor Bay, a short 2 miles from Leland’s Fishtown. The house features a wrap around deck and a second beach deck, both of which are perfect to watch the stunning sunsets over Lake Michigan. The small, private beach allows direct water access to the shallow waters of the Bay and this secluded location invites you to fall asleep to the sound of the waves. There are 2 kayaks, 2 bikes with helmets, 2 sets of golf clubs (right and left handed) and a gas grill. The house has a garage, wood and ceramic floors, a modern kitchen and a washer and dryer. There are beach toys, inflatable rafts, beach chairs and umbrella, just to mention a few things that will add to your vacation pleasure. On the inside of the house are board games, puzzles, a stereo, an Apple TV with a large flat screen and wireless internet.",
         cottageBedrooms: 2,
-        cottageBathrooms: 1.5,
+        cottageBathrooms: 3,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 10,
-        cottageName: "The Little Bridge Cottage",
+        cottageName: "Twin Birch",
         cottageLocation: "Lake Leelanau",
         cottageImage: "/assets/images/cardPhotos/bridge-card.jpg",
-        cottagePerNight: 313,
-        cottagePerWeek: 2100,
-        cottageSleeps: 6,
-        cottageSlug: "2 bedrooms, 1.5 baths cottage enjoys spectacular sunsets over the water!",
-        cottageDescription: "New to the renting market!! The new owners have completely renovated this darling cottage: new flooring, new kitchen cabinets, new appliances, new granite counter tops, new paint, new flatscreen TV and new beds and furniture. There is a grill, outdoor furniture, a dock and a fire pit for your enjoyment and use. Cable TV and internet are also available! Wall air-conditioner on floor with bedrooms! \n This is the perfect and a very affordable location for a get-away for a small family or 2 or 3 couples!",
-        cottageBedrooms: 2,
-        cottageBathrooms: 1.5,
+        cottagePerNight: 575,
+        cottagePerWeek: 5000,
+        cottageSleeps: 9,
+        cottageSlug: "153 feet of private lakeshore",
+        cottageDescription: "One hundred fifty three feet of lakeshore crystal clear water with a hard, sandy lake bottom, a paddle boat, permanent mooring for your own boat, docks, multiple decks, and beautiful gardens are just some of the amenities of this tastefully furnished and comfortable summer home that are waiting for you, your family, and your friends to enjoy. \nThis 4 bedroom, 2 bathroom home will sleep up to nine guests in comfortable beds. The living areas are appealing and very comfortable. The kitchen is well equipped and dining room will easily seat 8 people. \nThe outdoor areas offer attractive furniture with inspiring views of the lake and garden areas. There is also a gill to assist in creating summer suppers. \nThe spectacular sunsets announce the coming of star-filled night skies that will peacefully end a day of your memorable vacation.",
+        cottageBedrooms: 4,
+        cottageBathrooms: 2,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 11,
-        cottageName: "The Little Bridge Cottage",
-        cottageLocation: "Lake Leelanau",
+        cottageName: "Penwood Estate",
+        cottageLocation: "Leland",
         cottageImage: "/assets/images/cardPhotos/bridge-card.jpg",
-        cottagePerNight: 313,
-        cottagePerWeek: 2100,
-        cottageSleeps: 6,
-        cottageSlug: "2 bedrooms, 1.5 baths cottage enjoys spectacular sunsets over the water!",
-        cottageDescription: "New to the renting market!! The new owners have completely renovated this darling cottage: new flooring, new kitchen cabinets, new appliances, new granite counter tops, new paint, new flatscreen TV and new beds and furniture. There is a grill, outdoor furniture, a dock and a fire pit for your enjoyment and use. Cable TV and internet are also available! Wall air-conditioner on floor with bedrooms! \n This is the perfect and a very affordable location for a get-away for a small family or 2 or 3 couples!",
-        cottageBedrooms: 2,
-        cottageBathrooms: 1.5,
+        cottagePerNight: 1000,
+        cottagePerWeek: 7000,
+        cottageSleeps: 20,
+        cottageSlug: "The Red and Gray Cottages sleep up to 20 people in 9 bedrooms",
+        cottageDescription: "Penwood Estate is available as one package sleeping up to 20 people in 9 bedrooms with 4 bathrooms between the 2 cottages. This property is ideal for family reunions and corporate retreats. \nThis property is in an ideal location in the village of Leland to walk to all the stores, restaurants, Fishtown, the library, the Leelanau Historical Museum, the grocery store, the Old Art Building, and Lake Michigan beaches Sitting on t North Lake Leelanau at the edge of the Leland river offers renters accessibility by boat to the grocery store, the library, The Riverside rrestauranr and the Blubird Restaurant. \nPenwood Estate sits on the east bank of North Lake Leelanau just past the point where the river meets Lake Leelanau. The estate has two unique cottages available as a package for family reunions, corporate retreats and small celebrations! \nGray Cottage, the biggest house, with its large front lawn is backed by a roomy colorfully decorated screened-in porch, and stands as a familiar sentinel to Leland River travelers who move in their boats from the Leland River into Lake Leelanau. \nSeveral yards behind and slightly north of the main house stands Red Cottage, a once-upon-a-time carriage house, transformed into a comfortably rustic 4 bedroom, 2 bathroom cottage boasting a screened in porch that looks out on a gardened yard complete with outdoor seating and a grill. \nBoth cottages share the shoreline of the lake with its fire pit and lawn furniture. With waterfront availability come a boat slip or dock space for your own or a rented boat. A canoe and other water toys are also available for the pleasure of guests.",
+        cottageBedrooms: 9,
+        cottageBathrooms: 4,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 12,
-        cottageName: "The Little Bridge Cottage",
+        cottageName: "Irwin Cottage",
         cottageLocation: "Lake Leelanau",
         cottageImage: "/assets/images/cardPhotos/bridge-card.jpg",
-        cottagePerNight: 313,
-        cottagePerWeek: 2100,
-        cottageSleeps: 6,
-        cottageSlug: "2 bedrooms, 1.5 baths cottage enjoys spectacular sunsets over the water!",
-        cottageDescription: "New to the renting market!! The new owners have completely renovated this darling cottage: new flooring, new kitchen cabinets, new appliances, new granite counter tops, new paint, new flatscreen TV and new beds and furniture. There is a grill, outdoor furniture, a dock and a fire pit for your enjoyment and use. Cable TV and internet are also available! Wall air-conditioner on floor with bedrooms! \n This is the perfect and a very affordable location for a get-away for a small family or 2 or 3 couples!",
-        cottageBedrooms: 2,
-        cottageBathrooms: 1.5,
+        cottagePerNight: 325,
+        cottagePerWeek: 3250,
+        cottageSleeps: 10,
+        cottageSlug: "Private beach on Little Traverse Lake",
+        cottageDescription: "The Irwin Cottage sleeps up to 8 comfortably in 4 bedrooms and accommodates 2 more on a pull-out in the den for guests. The cottage sits just feet from the lake, has a sandy beach, a sandy bottom to the lake and is shallow for a long way out into the lake. This is great for small children. There is a dock, a rowboat , and one kayak available for guests use. The kitchen is complete with a dishwasher and garbage disposal, and all new stainless steel appliances. There are granite counter tops, and the living room boasts a gas fireplace, great for cool mornings or a cozy late evening! There is a washer and dryer in the laundry room off the kitchen. The dining room table sits ten people. There is a gas grill available for guest use. The den has a large TV, DVD and video player. Cable is also available as well as DSL wireless internet connection. There are two bathrooms. Linens, towels, some paper products and soaps are supplied. There is a row boat and one kayak available for guest use.",
+        cottageBedrooms: 4,
+        cottageBathrooms: 2,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     },
     {
         cottageId: 13,
-        cottageName: "The Little Bridge Cottage",
+        cottageName: "Beauvais Cottage",
         cottageLocation: "Lake Leelanau",
         cottageImage: "/assets/images/cardPhotos/bridge-card.jpg",
-        cottagePerNight: 313,
-        cottagePerWeek: 2100,
+        cottagePerNight: 250,
+        cottagePerWeek: 1750,
         cottageSleeps: 6,
-        cottageSlug: "2 bedrooms, 1.5 baths cottage enjoys spectacular sunsets over the water!",
-        cottageDescription: "New to the renting market!! The new owners have completely renovated this darling cottage: new flooring, new kitchen cabinets, new appliances, new granite counter tops, new paint, new flatscreen TV and new beds and furniture. There is a grill, outdoor furniture, a dock and a fire pit for your enjoyment and use. Cable TV and internet are also available! Wall air-conditioner on floor with bedrooms! \n This is the perfect and a very affordable location for a get-away for a small family or 2 or 3 couples!",
-        cottageBedrooms: 2,
-        cottageBathrooms: 1.5,
+        cottageSlug: "Cozy cottage offers private beach on Little Traverse Lake",
+        cottageDescription: "The Beauvais Cottage is a small, well built and very well maintained summer cottage. It has three bedrooms, one with a queen bed, one with a double bed and one with two twins. The kitchen is well equipped, the stove gas, the house has WiFi, cable TV, DVD/BluRay player, and stereo system. A gas furnace heats the cottage on the occasional chilly summer morning. There is a canoe for guest use, a charcoal grill, a new fire pit for summer evenings, a dock to sun on and a deck on which to relax. A garage is also available for guest use. A short walk down Little Traverse Lake Road leads to a foot path that goes back to Lake Michigan and a wide sandy quiet beach! Enjoy the morning on Lake and return to Little Traverse lake to canoe and sun in the afternoon. Relax as evening approaches around the fire pit. Create summer memories!",
+        cottageBedrooms: 3,
+        cottageBathrooms: 1,
         cottageAmenities: [],
-        cottagePets: false
+        cottagePets: false,
+        cottageBooked: []
     }
 ]
 
