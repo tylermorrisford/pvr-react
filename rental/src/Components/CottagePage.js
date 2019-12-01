@@ -9,6 +9,10 @@ class CottagePage extends Component{
         }
     }
 
+    componentDidMount(){
+        // when this component mounts grab the cottage by id
+    }
+
     render() {
         return(
             <h1>Cottage Page</h1>   // Need to use route, filter cottages to id, load this component

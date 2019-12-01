@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
 
@@ -14,7 +15,9 @@ const Card = (props) => {
             <p>${props.data.cottagePerNight}/night</p>
           </div>
           <div className="card-action card-link">
-            <p>View More > </p>
+            <Link to={"/cottages/" + cottage._id}>
+            <p>View More ></p> 
+              </Link>
           </div>
         </div>
       </div>
