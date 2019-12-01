@@ -13,7 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-// app.set('views', path.join(__dirname, 'views/'));
  
 app.get('/', (req, res) => {
     res.render('index');
@@ -37,9 +36,9 @@ app.get('/', (req, res) => {
 // app.use(routes);
 
 // // Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/peninsulavacationrentals");
 
 // // Start the API server
-// app.listen(PORT, function() {
+// app.listen(PORT, () => {
 //   console.log(`Server now listening on PORT ${PORT}`);
 // });
