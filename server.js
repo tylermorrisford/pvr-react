@@ -1,13 +1,13 @@
 // require node packages: 
-var express = require("express");
-var mongoose = require("mongoose");
-var path = require('path');
+const express = require("express");
+const mongoose = require("mongoose");
+const path = require('path');
 
 // require mongoose models
-// var db = require("./models");
-var PORT = process.env.PORT || 3000;
+// const db = require("./models");
+const PORT = process.env.PORT || 3000;
 
-var app = express();
+const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 // app.set('views', path.join(__dirname, 'views/'));
  
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
     res.render('index');
 });
 
