@@ -1,3 +1,13 @@
+const mongoose = require("mongoose");
+const db = require("../models");
+
+// Use routes, connect to MongoDb, empty and insert cottages
+
+mongoose.connect(
+  process.env.MONGODB_URI ||
+  "mongodb://localhost/peninsulavacationrentals"
+);
+
 const cottages = [
     {
         cottageId: 1,
@@ -207,7 +217,18 @@ const cottages = [
         cottagePets: false,
         cottageBooked: []
     }
-]
+];
 
-export default cottages
-// hard code check-in and check-out times
+
+// empties db and inserts all cottages 
+db.Cottages
+  .remove({})
+  .then(() => db.Cottages.collection.insertMany(cottages))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
