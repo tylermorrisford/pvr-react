@@ -1,21 +1,33 @@
-import React from "react";
+import React, {Component} from "react";
 import cottages from "../Components/cottages";
+import API from "../utils/API";
 import Card from "../Components/Card";
 
-const ViewAll = () => {
+class ViewAll extends Component {
+    state = {
+        cottages: []
+    }
 
-        let allCottages = cottages.map((cottage,i) => (
-            <Card key={i} data={cottage} />
-            ))
+    componentDidMount() {
+        API.getCottages()
+            .then(res => this.setState({ cottages: res.data }))
+            .catch(err => console.log(err));
+          }
+render(){
 
-        return(
-            <div className="container">
-                <h3>All Rentals</h3>
-                <div className="row flex-container">
-                {allCottages}
-                </div>
+    const allCottages = cottages.map((cottage,i) => (
+        <Card key={i} data={cottage} />
+        ))
+
+    return(
+        <div className="container">
+            <h3>All Rentals</h3>
+            <div className="row flex-container">
+            {allCottages}
             </div>
-        )
+        </div>
+    )
+}
     
 }
 

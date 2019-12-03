@@ -14,11 +14,11 @@ const Card = (props) => {
             <p>{props.data.cottageSlug}</p><br/>
             <p>${props.data.cottagePerNight}/night</p>
           </div>
-          {/* <div className="card-action card-link"> */}
-            {/* <Link to={"/cottages/" + cottage._id}> */}
-            {/* <p>View More ></p>  */}
-              {/* </Link> */}
-          {/* </div> */}
+          {/* <div className="card-action card-link">
+            <Link to={"/cottages/" + props.data.cottage._id}>
+            <p>View More ></p> 
+              </Link>
+          </div> */}
         </div>
       </div>
     )
