@@ -19,7 +19,7 @@ render() {
     
         // Leland
     const leland = this.state.cottages.filter(el => el.cottageLocation === "Leland" );
-    console.log(leland);
+    console.log('this is leland... empty?', leland);
     const lelandCottages = leland.map((cottage, i) =>  <Card key={i} data={cottage} />);
         // Lake Leelanau
     const leelanau = this.state.cottages.filter(lc => lc.cottageLocation === "Lake Leelanau" );

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import cottages from "../Components/cottages";
+// import cottages from "../Components/cottages";
 import API from "../utils/API";
 import Card from "../Components/Card";
 
@@ -15,7 +15,7 @@ class ViewAll extends Component {
           }
 render(){
 
-    const allCottages = cottages.map((cottage,i) => (
+    const allCottages = this.state.cottages.map((cottage,i) => (
         <Card key={i} data={cottage} />
         ))
 
