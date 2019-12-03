@@ -1,21 +1,28 @@
 import React, {Component} from "react";
+import { Link } from "react-router-dom";
 import cottages from "../Components/cottages";
+import API from "../utils/API";
  
 class CottagePage extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-
+        state = {
+            cottage: {}
         }
-    }
+    
 
-    componentDidMount(){
-        // when this component mounts grab the cottage by id
-    }
+    componentDidMount() {
+        API.getCottage(this.props.match.params.id)
+            .then(res => this.setState({ cottage: res.data }))
+            .catch(err => console.log(err));
+          }
 
     render() {
         return(
-            <h1>Cottage Page</h1>   // Need to use route, filter cottages to id, load this component
+            <div>
+            <h1>Single Cottage Page</h1>   // Need to use route, load this component
+            <h3>{this.state.cottage.cottageName} | {this.state.cottage.cottageLocation}</h3>
+            <div>booking calendar</div>
+            <button>Book ></button>
+            </div>
         )
     }
 

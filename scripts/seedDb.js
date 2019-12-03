@@ -221,9 +221,9 @@ const cottages = [
 
 
 // empties db and inserts all cottages 
-db.Cottages
+db.Cottage
   .remove({})
-  .then(() => db.Cottages.collection.insertMany(cottages))
+  .then(() => db.Cottage.collection.insertMany(cottages))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
