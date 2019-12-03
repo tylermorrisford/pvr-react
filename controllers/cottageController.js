@@ -3,7 +3,7 @@ const db = require("../models");
 // Methods for the cottageController
 module.exports = {
   findAll: function(req, res) {
-    db.Cottage
+    db.cottages
       .find(req.query)
       .sort({ cottageId: -1 })
       .then(dbModel => res.json(dbModel))

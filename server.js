@@ -1,24 +1,3 @@
-// // require node packages: 
-// const express = require("express");
-// const mongoose = require("mongoose");
-// const path = require('path');
-
-// // require mongoose models
-// // const db = require("./models");
-// const PORT = process.env.PORT || 3000;
-
-// const app = express();
-
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-// app.use(express.static("public"));
-
- 
-// app.get('/', (req, res) => {
-//     res.render('index');
-// });
-
-// server.js - as reference
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -28,7 +7,7 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
+// Serve up static assets (usually on heroku) // ------------------ This will need to be updated before deployment
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
