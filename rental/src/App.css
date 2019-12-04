@@ -2,6 +2,11 @@ h1, h2 {
   font-family: 'Sriracha', cursive;
 } 
 
+h4 {
+  font-family: 'Sriracha', cursive;
+  color: #333333;
+}
+
 .leland {
   background-image: url(/assets/images/Leland.jpg);
   width: 100%;

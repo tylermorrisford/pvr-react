@@ -7,7 +7,7 @@ class CottagePage extends Component{
         state = {
             cottage: {}
         }
-    
+    // const CottagePage = (props) => {
 
     componentDidMount() {
         API.getCottage(this.props.match.params.id)
