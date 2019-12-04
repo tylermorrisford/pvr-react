@@ -27,6 +27,15 @@ h1, h2 {
   background-size: cover;
 }
 
+.northport {
+  background-image: url(/assets/images/Northport-Main.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .cottage-title {
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
@@ -39,4 +48,5 @@ h1, h2 {
 .flex-container {
   display: flex;
   flex-flow: row wrap;
+  align-items: flex-start;
 }

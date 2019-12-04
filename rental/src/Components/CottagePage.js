@@ -14,11 +14,11 @@ class CottagePage extends Component{
             .then(res => this.setState({ cottage: res.data }))
             .catch(err => console.log(err));
           }
-
+// Need to use route, load this component
     render() {
         return(
             <div>
-            <h1>Single Cottage Page</h1>   // Need to use route, load this component
+            <h1>Single Cottage Page</h1>   
             <h3>{this.state.cottage.cottageName} | {this.state.cottage.cottageLocation}</h3>
             <div>booking calendar</div>
             <button>Book ></button>
