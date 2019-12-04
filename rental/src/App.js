@@ -17,7 +17,7 @@ const Home = () => {
 }
 
 const About = () => {
-  return  <div className="leland">
+  return  <div className="leelanau">
             <div className="valign-wrapper callout">
               <h2>About</h2>
             </div>
