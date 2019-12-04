@@ -6,6 +6,7 @@ import Destinations from "./Pages/Destinations";
 import ViewAll from "./Pages/ViewAll";
 import NoMatch from "./Pages/NoMatch";
 import CottagePage from './Components/CottagePage';
+import Footer from "./Components/Footer";
 
 
 const Home = () => {
@@ -45,7 +46,7 @@ const App = () => {
       <Route exact path="/cottages/:id" component={CottagePage} />
       <Route component={NoMatch} />
       </Switch>
-      <h1>footer</h1>
+      <Footer />
     </Router>
   );
 }
