@@ -11,6 +11,10 @@ footer {
   padding: 50px 0 15px 0;
 }
 
+.navbar-fixed {
+  z-index: 1;
+}
+
 .leland {
   background-image: url(/assets/images/Leland.jpg);
   width: 100%;

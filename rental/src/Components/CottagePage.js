@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 // import { Link } from "react-router-dom";
 import API from "../utils/API";
+// import BookingCalendar from "./BookingCalendar";
+import DateRangeCalendar from "./DateRangeCalendar";
  
 class CottagePage extends Component{
         state = {
@@ -16,12 +18,20 @@ class CottagePage extends Component{
     render() {
         return(
             <div className="container">
-            <h1>{this.state.cottage.cottageName}</h1>   
-            <img alt="cottagePhoto" src={this.state.cottage.cottageImage} />
-            <h5>Sleeps: {this.state.cottage.cottageSleeps}, Beds: {this.state.cottage.cottageBedrooms}, Baths:{this.state.cottage.cottageBathrooms}</h5>
-            <p>{this.state.cottage.cottageDescription}</p>
-            <div> booking calendar goes here </div>
-            <button className="waves-effect waves-light btn">Book ></button>
+                <h1>{this.state.cottage.cottageName}</h1>
+                <div className="row">
+                    <div className="col s12 m6">
+                        <img alt="cottagePhoto" src={this.state.cottage.cottageImage} />
+
+                    </div>
+                    <div className="col s12 m6">
+                        <div className="center"><DateRangeCalendar /><br/>
+                        <button className="waves-effect waves-light btn">Book Your Stay ></button></div>
+
+                    </div>
+                </div>
+                <h5>Sleeps: {this.state.cottage.cottageSleeps}, Beds: {this.state.cottage.cottageBedrooms}, Baths:{this.state.cottage.cottageBathrooms}</h5>
+                <p>{this.state.cottage.cottageDescription}</p>
             </div>
         )
     }
