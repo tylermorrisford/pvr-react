@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="navbar-fixed">
         <nav className="white">
             <div className="nav-wrapper">
-                <NavLink exact to="/" className="brand-logo"><h4>Peninsula Vacation Rentals</h4></NavLink>
+                <NavLink exact to="/" className="brand-logo"><h5>Peninsula Vacation Rentals</h5></NavLink>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li><NavLink className="nav-links" to="/destinations">Destinations</NavLink></li>
                     <li><NavLink className="nav-links" to="/all-rentals">All Rentals</NavLink></li>

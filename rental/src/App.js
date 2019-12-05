@@ -12,7 +12,7 @@ import Footer from "./Components/Footer";
 const Home = () => {
   return  <div className="leland">
             <div className="valign-wrapper callout">
-              <h2>Explore Leelanau</h2>
+              <h2>Explore Leelanau County</h2>
             </div>
           </div>
 }

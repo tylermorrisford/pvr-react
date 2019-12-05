@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 // import { Link } from "react-router-dom";
 import API from "../utils/API";
-// import BookingCalendar from "./BookingCalendar";
-import DateRangeCalendar from "./DateRangeCalendar";
+import BookingCalendar from "./BookingCalendar";
+// import DateRangeCalendar from "./DateRangeCalendar";
  
 class CottagePage extends Component{
         state = {
@@ -25,7 +25,7 @@ class CottagePage extends Component{
 
                     </div>
                     <div className="col s12 m6">
-                        <div className="center"><DateRangeCalendar /><br/>
+                        <div className="center"><BookingCalendar /><br/>
                         <button className="waves-effect waves-light btn">Book Your Stay ></button></div>
 
                     </div>
