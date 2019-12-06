@@ -18,3 +18,5 @@ export default {
     return axios.post("/api/cottages", cottageData);
   }
 };
+
+// need to add update api route

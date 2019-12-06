@@ -5,6 +5,7 @@ import Nabvar from "./Components/Navbar";
 import Destinations from "./Pages/Destinations";
 import ViewAll from "./Pages/ViewAll";
 import NoMatch from "./Pages/NoMatch";
+import About from "./Components/About";
 import CottagePage from './Components/CottagePage';
 import Footer from "./Components/Footer";
 
@@ -17,13 +18,13 @@ const Home = () => {
           </div>
 }
 
-const About = () => {
-  return  <div className="leelanau">
-            <div className="valign-wrapper callout">
-              <h2>About</h2>
-            </div>
-          </div>
-}
+// const About = () => {
+//   return  <div className="leelanau">
+//             <div className="valign-wrapper callout">
+//               <h2>About</h2>
+//             </div>
+//           </div>
+// }
 
 const Contact = () => {
   return  <div className="northport">

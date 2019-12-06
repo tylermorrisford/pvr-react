@@ -4,6 +4,7 @@ import Calendar from 'react-calendar';
 export default class BookingCalendar extends Component {
   state = {
     date: new Date(),
+    // where to setup options for clicking multiple days
   }
  
   onChange = date => this.setState({ date })

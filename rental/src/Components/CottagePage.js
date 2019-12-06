@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 // import { Link } from "react-router-dom";
 import API from "../utils/API";
-import BookingCalendar from "./BookingCalendar";
-// import DateRangeCalendar from "./DateRangeCalendar";
+// import BookingCalendar from "./BookingCalendar";
+import DateRangeCalendar from "./DateRangeCalendar";
  
 class CottagePage extends Component{
         state = {
@@ -14,6 +14,10 @@ class CottagePage extends Component{
             .then(res => this.setState({ cottage: res.data }))
             .catch(err => console.log(err));
           }
+
+    onClick() {
+        // api. booking dates to db, update 
+    }     
 // Need to use route, load this component
     render() {
         return(
@@ -25,12 +29,13 @@ class CottagePage extends Component{
 
                     </div>
                     <div className="col s12 m6">
-                        <div className="center"><BookingCalendar /><br/>
+                        <div className="center"><DateRangeCalendar /><br/>
                         <button className="waves-effect waves-light btn">Book Your Stay ></button></div>
 
                     </div>
                 </div>
-                <h5>Sleeps: {this.state.cottage.cottageSleeps}, Beds: {this.state.cottage.cottageBedrooms}, Baths:{this.state.cottage.cottageBathrooms}</h5>
+                <h5>{this.state.cottage.cottageSlug}</h5>
+                <h6>Sleeps: {this.state.cottage.cottageSleeps}, Beds: {this.state.cottage.cottageBedrooms}, Baths: {this.state.cottage.cottageBathrooms}</h6>
                 <p>{this.state.cottage.cottageDescription}</p>
             </div>
         )
