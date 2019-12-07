@@ -8,6 +8,7 @@ import NoMatch from "./Pages/NoMatch";
 import About from "./Components/About";
 import CottagePage from './Components/CottagePage';
 import Footer from "./Components/Footer";
+import Admin from "./Pages/Admin";
 
 
 const Home = () => {
@@ -18,14 +19,6 @@ const Home = () => {
           </div>
 }
 
-// const About = () => {
-//   return  <div className="leelanau">
-//             <div className="valign-wrapper callout">
-//               <h2>About</h2>
-//             </div>
-//           </div>
-// }
-
 const Contact = () => {
   return  <div className="northport">
             <div className="valign-wrapper callout">
@@ -33,7 +26,7 @@ const Contact = () => {
             </div>
           </div>
 }
-
+// Add Auth0 on Admin route
 const App = () => {
   return (
     <Router>
@@ -45,6 +38,7 @@ const App = () => {
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route exact path="/cottages/:id" component={CottagePage} />
+      <Route exact path="/admin" component={Admin} /> 
       <Route component={NoMatch} />
       </Switch>
       <Footer />

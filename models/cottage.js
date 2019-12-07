@@ -19,6 +19,8 @@ const cottageSchema = new Schema({ // update scheme with cottage details
   date: { type: Date, default: Date.now }
 });
 
+// add array of cottagePhotos, 
+
 const Cottage = mongoose.model("Cottage", cottageSchema);
 
 module.exports = Cottage;

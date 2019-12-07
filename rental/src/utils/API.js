@@ -13,10 +13,14 @@ export default {
   deleteCottage: function(id) {
     return axios.delete("/api/cottages/" + id);
   },
+  // Update the cottage with the given id -- most recently added!
+  updateCottage: function(id) {
+    return axios.put("/api/cottages/" + id);
+  },
   // Saves a cottage to the database
   saveCottage: function(cottageData) {
     return axios.post("/api/cottages", cottageData);
   }
 };
 
-// need to add update api route
+// need to add update api put route

@@ -15,6 +15,14 @@ footer {
   z-index: 1;
 }
 
+li {
+  line-height: 4;
+}
+
+.collection-item:hover {
+  background-color: #eeeeee;
+}
+
 .leland {
   background-image: url(/assets/images/Leland.jpg);
   width: 100%;

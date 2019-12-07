@@ -16,7 +16,7 @@ class CottagePage extends Component{
           }
 
     onClick() {
-        // api. booking dates to db, update 
+        // api. booking dates to db, using put route
     }     
 // Need to use route, load this component
     render() {
