@@ -14,12 +14,24 @@ class Admin extends Component {
             .catch(err => console.log(err));
           }
 
+    reload() {
+        API.getCottages()
+            .then(res => this.setState({ cottages: res.data }))
+            .catch(err => console.log(err));
+          
+    }
+
     deleteCottage() {
-        // add api to delete cottage
-        // API.deleteCottage(this.cottage.cottageName){
-       //       
-       // }
+        // add (alert: are you sure)
+        console.log(this.state.cottage._id)
+        API.deleteCottage(this.state.cottage._id)
+            .then(API.getCottages()
+                .then(res => this.setState({ cottages: res.data }))
+                .catch(err => console.log(err)))
     }      
+
+
+
 render(){
 
     const listCottages = this.state.cottages.map((cottage,i) => (
@@ -34,7 +46,7 @@ render(){
             <div className="row">
                 <div className="col m6 s12">
         <h5>Add New Cottage:</h5>
-        <AddForm />
+        <AddForm reload={() => {this.reload()}} />
         <hr />
                 </div>
                 <div className="col m6 s12 left-align">

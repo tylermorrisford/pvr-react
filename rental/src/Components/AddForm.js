@@ -1,15 +1,18 @@
 import React from "react";
 // import { Formik } from 'formik';
 import { useFormik } from "formik";
+import API from "../utils/API";
 
-const AddForm = () => {
+const AddForm = ({
+    reload
+}) => {
     const formik = useFormik({
       initialValues: 
       {   
-      cottageId: "",
+    //   cottageId: "",
       cottageName: "",
       cottageLocation: "",
-      cottageImage: "", // would need to add logic to upload image, for now, paste in known img src
+      cottageImage: "", // for exmaples => /assets/images/cardPhotos/bridge-card.jpg
       cottagePerNight: "",
       cottagePerWeek: "",
       cottageSleeps: "",
@@ -19,7 +22,9 @@ const AddForm = () => {
       cottageBathrooms: "", 
     },
       onSubmit: values => {
-        alert(JSON.stringify(values, null, 2));
+          // add API.create(values).then(reload())
+        //   alert(JSON.stringify(values, null, 2));
+          API.saveCottage(values).then(reload()).catch((err) => {console.log(err)})
       }
     });
     return (
@@ -33,7 +38,7 @@ const AddForm = () => {
           onChange={formik.handleChange}
           value={formik.values.cottageName}
         /><br />
-        <label htmlFor="cottageLocation">Cottage Location: </label>
+        <label htmlFor="cottageLocation">Location: </label>
         <input
           className="validate"
           id="cottageLocation"
@@ -42,7 +47,7 @@ const AddForm = () => {
           onChange={formik.handleChange}
           value={formik.values.cottageLocation}
         /><br />
-        <label htmlFor="cottageImage">Cottage Image (src): </label>
+        <label htmlFor="cottageImage">Image (src): </label>
         <input
           className="validate"
           id="cottageImage"
@@ -51,7 +56,7 @@ const AddForm = () => {
           onChange={formik.handleChange}
           value={formik.values.cottageImage}
         /><br />
-        <label htmlFor="cottagePerNight">Cottage Per Night Price: </label>
+        <label htmlFor="cottagePerNight">Per Night Price: </label>
         <input
           className="validate"
           id="cottagePerNight"
@@ -60,7 +65,7 @@ const AddForm = () => {
           onChange={formik.handleChange}
           value={formik.values.cottagePerNight}
         /><br />
-        <label htmlFor="cottagePerWeek">Cottage Weekly Price: </label>
+        <label htmlFor="cottagePerWeek">Weekly Price: </label>
         <input
           className="validate"
           id="cottagePerWeek"
@@ -78,7 +83,7 @@ const AddForm = () => {
           onChange={formik.handleChange}
           value={formik.values.cottageSleeps}
         /><br />
-        <label htmlFor="cottageSlug">Cottage Tagline: </label>
+        <label htmlFor="cottageSlug">Tagline: </label>
         <input
           className="validate"
           id="cottageSlug"
@@ -114,7 +119,6 @@ const AddForm = () => {
           onChange={formik.handleChange}
           value={formik.values.cottageBathrooms}
         /><br />
-        <hr />
         <button className="btn" type="submit">Add Cottage</button>
       </form>
     );

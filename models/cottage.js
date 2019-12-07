@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const cottageSchema = new Schema({ // update scheme with cottage details
-  cottageId: { type: Number, required: true },
+  cottageId: { type: Number, required: false },
   cottageName: { type: String, required: true },
   cottageLocation: { type: String, required: true },
   cottageImage: { type: String, required: true },
