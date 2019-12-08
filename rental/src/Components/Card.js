@@ -22,6 +22,6 @@ const Card = (props) => {
         </div>
       </div>
     )
-} // use Link to load CottagePage from {props.data._id}
+}
 
 export default Card

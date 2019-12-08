@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-// import cottages from "../Components/cottages";
 import API from "../utils/API";
 import Card from "../Components/Card";
 

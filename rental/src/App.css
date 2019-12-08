@@ -7,6 +7,12 @@ h5 {
   color: #444444;
 }
 
+label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: rgb(53, 53, 53);
+}
+
 footer {
   padding: 50px 0 15px 0;
 }
@@ -15,8 +21,35 @@ footer {
   z-index: 1;
 }
 
+.btn {
+  text-transform: none !important;
+}
+
 li {
   line-height: 4;
+}
+
+input[type="cottageName"],
+input[type="cottageLocation"],
+input[type="cottageImage"], 
+input[type="cottagePerNight"],
+input[type="cottagePerWeek"], 
+input[type="cottageSleeps"], 
+input[type="cottageSlug"],
+input[type="cottageDescription"],
+input[type="cottageBedrooms"],
+input[type="cottageBathrooms"]
+{
+  margin: 10px 0;
+  padding: 0.6rem 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #b6b6b6;
+  /* background-color: var(--gray-100); */
+  color: #5a5a5a;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
 }
 
 .collection-item:hover {

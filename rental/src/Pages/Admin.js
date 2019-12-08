@@ -22,12 +22,13 @@ class Admin extends Component {
     }
 
     deleteCottage() {
-        // add (alert: are you sure)
-        console.log(this.state.cottage._id)
-        API.deleteCottage(this.state.cottage._id)
-            .then(API.getCottages()
-                .then(res => this.setState({ cottages: res.data }))
-                .catch(err => console.log(err)))
+         alert(`are you sure you'd like to delete this cottage?`);
+        // console.log(data._id)
+        // console.log('cottage => ', this.state.cottage)
+        // API.deleteCottage(this.state.cottage._id)
+        //     .then(API.getCottages()
+        //         .then(res => this.setState({ cottages: res.data }))
+        //         .catch(err => console.log(err)))
     }      
 
 
@@ -35,10 +36,11 @@ class Admin extends Component {
 render(){
 
     const listCottages = this.state.cottages.map((cottage,i) => (
-        <li className="collection-item" key={i} data={cottage}><h6>{cottage.cottageName},  {cottage.cottageLocation}{"    "}<button className="btn" onClick={this.deleteCottage}>delete</button></h6></li>
+        <li className="collection-item" key={i} data={cottage}><h6>{cottage.cottageName},  {cottage.cottageLocation}{"    "}<button className="btn" onClick={this.deleteCottage}>Delete</button></h6></li>
         ))
 
-            console.log(listCottages);
+        console.log('listCottages', listCottages);
+        console.log('this.state', this.state);
 
     return(
 

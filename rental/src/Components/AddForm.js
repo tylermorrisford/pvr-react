@@ -74,7 +74,7 @@ const AddForm = ({
           onChange={formik.handleChange}
           value={formik.values.cottagePerWeek}
         /><br />
-        <label htmlFor="cottageSleeps">This Cottage Sleeps (enter a number): </label>
+        <label htmlFor="cottageSleeps">Cottage Sleeps (enter a number): </label>
         <input
           className="validate"
           id="cottageSleeps"
