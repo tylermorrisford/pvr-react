@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Nabvar from "./Components/Navbar";
+import Home from "./Pages/Home";
 import Destinations from "./Pages/Destinations";
 import ViewAll from "./Pages/ViewAll";
 import NoMatch from "./Pages/NoMatch";
@@ -10,14 +11,6 @@ import CottagePage from './Components/CottagePage';
 import Footer from "./Components/Footer";
 import Admin from "./Pages/Admin";
 
-
-const Home = () => {
-  return  <div className="leland">
-            <div className="valign-wrapper callout">
-              <h2>Explore Leelanau County</h2>
-            </div>
-          </div>
-}
 
 const Contact = () => {
   return  <div className="northport">

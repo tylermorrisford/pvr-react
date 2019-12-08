@@ -108,3 +108,8 @@ input[type="cottageBathrooms"]
   flex-flow: row wrap;
   align-items: flex-start;
 }
+
+.spinner-wrapper {
+  padding-top: 50px;
+  min-height: 200px;
+}
