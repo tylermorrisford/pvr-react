@@ -3,10 +3,9 @@ import API from "../utils/API";
 import AddForm from "../Components/AddForm";
 
 class Admin extends Component {
-    state = {
-        cottages: []
-    }
-
+            state = {
+                cottages: []
+            }
 
     componentDidMount() {
         API.getCottages()
@@ -20,23 +19,22 @@ class Admin extends Component {
             .catch(err => console.log(err));
           
     }
-
-    deleteCottage() {
-         alert(`are you sure you'd like to delete this cottage?`);
-        // console.log(data._id)
-        // console.log('cottage => ', this.state.cottage)
-        // API.deleteCottage(this.state.cottage._id)
-        //     .then(API.getCottages()
-        //         .then(res => this.setState({ cottages: res.data }))
-        //         .catch(err => console.log(err)))
-    }      
-
-
-
-render(){
+    
+    deleteCottage = (id, name) => {
+            //    alert(`are you sure you'd like to delete ${name}, ${id}?`);
+              console.log(id)
+              API.deleteCottage(id)
+                  .then(API.getCottages()
+                      .then(res => this.setState({ cottages: res.data }))
+                      .catch(err => console.log(err)))
+          }      
+    
+    
+    render(){
+        
 
     const listCottages = this.state.cottages.map((cottage,i) => (
-        <li className="collection-item" key={i} data={cottage}><h6>{cottage.cottageName},  {cottage.cottageLocation}{"    "}<button className="btn" onClick={this.deleteCottage}>Delete</button></h6></li>
+        <li className="collection-item" key={i} data={cottage}><h6>{cottage.cottageName}, {cottage.cottageLocation}<button className="btn delete-btn" type="submit" onClick={() => this.deleteCottage(cottage._id, cottage.cottageName)}>Delete</button></h6></li>
         ))
 
         console.log('listCottages', listCottages);
@@ -58,7 +56,6 @@ render(){
                 
             </div>
         </div>
-
 
     )
 }

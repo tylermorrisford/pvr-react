@@ -22,8 +22,7 @@ const AddForm = ({
       cottageBathrooms: "", 
     },
       onSubmit: values => {
-          // add API.create(values).then(reload())
-        //   alert(JSON.stringify(values, null, 2));
+          // Save new cottage - then reload cottage data to the Admin page
           API.saveCottage(values).then(reload()).catch((err) => {console.log(err)})
       }
     });

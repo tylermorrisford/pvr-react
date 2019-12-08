@@ -25,6 +25,10 @@ footer {
   text-transform: none !important;
 }
 
+.delete-btn {
+  margin: 0 10px;
+}
+
 li {
   line-height: 4;
 }
