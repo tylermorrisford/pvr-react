@@ -10,6 +10,11 @@ import About from "./Components/About";
 import CottagePage from './Components/CottagePage';
 import Footer from "./Components/Footer";
 import Admin from "./Pages/Admin";
+import Leland from './Pages/Leland';
+// import LakeLeelanau from './Pages/LakeLeelanau';
+// import Northport from './Pages/Northport';
+// import LittleTraverseLake from './Pages/LittleTraverseLake';
+// import LakeMichigan from "./Pages/LakeMichigan";
 
 
 const Contact = () => {
@@ -26,8 +31,13 @@ const App = () => {
       <Nabvar />
       <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/all-rentals" component={ViewAll} />
       <Route exact path="/destinations" component={Destinations} />
+      <Route exact path="/all-rentals" component={ViewAll} />
+      <Route exact path="/leland" component={Leland} />
+      {/* <Route exact path="/lakeleelanau" component={LakeLeelanau} /> */}
+      {/* <Route exact path="/northport" component={Northport} /> */}
+      {/* <Route exact path="/littletraverselake" component={LittleTraverseLake} /> */}
+      {/* <Route exact path="/lakemichigan" component={LakeMichigan} /> */}
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route exact path="/cottages/:id" component={CottagePage} />

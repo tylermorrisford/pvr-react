@@ -10,6 +10,7 @@ class LakeMichigan extends Component{
     constructor(){
         super() 
         this.state = {
+            cottages: {},
             ready: false
         }
     }

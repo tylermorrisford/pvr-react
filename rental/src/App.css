@@ -115,6 +115,10 @@ input[type="cottageBathrooms"]
   min-height: 200px;
 }
 
+.navbar-fixed {
+  z-index: 9;
+}
+
 /* Animations */
 
 /* .fade-in {
