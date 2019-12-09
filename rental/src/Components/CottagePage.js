@@ -1,12 +1,14 @@
 import React, {Component} from "react";
 // import { Link } from "react-router-dom";
 import API from "../utils/API";
-// import BookingCalendar from "./BookingCalendar";
 import DateRangeCalendar from "./DateRangeCalendar";
+// import DateRangeSelect from "./DateRangeSelect";
+// import Iframe from 'react-iframe';
+// import dotenv from 'dotenv';
  
 class CottagePage extends Component{
         state = {
-            cottage: {}
+            cottage: {},
         }
 
     componentDidMount() {
@@ -15,8 +17,17 @@ class CottagePage extends Component{
             .catch(err => console.log(err));
           }
 
-    onClick() {
+    bookDates() {
         // api. booking dates to db, using put route
+        // console.log(this.state.cottage.cottageBooked);
+        // this.setState({
+        //     booking: {
+        //         start: this.state.dates.start,
+        //         end: this.state.dates.end
+        //     } // this.state.cottage.cottageBooked.push(this.state.booking)
+        // })
+        // console.log(this.state.cottage.cottageBooked);
+        // API.updateCottage(id)
     }     
 // Need to use route, load this component
     render() {
@@ -29,18 +40,28 @@ class CottagePage extends Component{
 
                     </div>
                     <div className="col s12 m6">
-                        <div className="center"><DateRangeCalendar /><br/>
-                        <button className="waves-effect waves-light btn">Book Your Stay ></button></div>
+                        <div className="center"><DateRangeCalendar data={this.state.cottage}/><br/>
+                        {/* <div className="center"><DateRangeSelect data={this.state.cottage}/><br/> */}
+                        {/* <button type="submit" onClick={() => {}} className="waves-effect waves-light btn">Book Your Stay ></button></div> */}
+                        </div>
 
                     </div>
                 </div>
                 <h5>{this.state.cottage.cottageSlug}</h5>
                 <h6>Sleeps: {this.state.cottage.cottageSleeps}, Beds: {this.state.cottage.cottageBedrooms}, Baths: {this.state.cottage.cottageBathrooms}</h6>
                 <p>{this.state.cottage.cottageDescription}</p>
+                {/* <Iframe 
+                    url={this.state.cottage.cottageMap}
+                    width="600" 
+                    height="450" 
+                    frameborder="0" 
+                    style="border:0"
+                    /> */}
             </div>
         )
     }
-
 }
+
+// add map using google map js api
 
 export default CottagePage
