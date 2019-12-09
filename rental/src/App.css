@@ -111,6 +111,7 @@ input[type="cottageBathrooms"]
 
 .spinner-wrapper {
   padding-top: 50px;
+  margin: 0 auto;
   min-height: 200px;
 }
 

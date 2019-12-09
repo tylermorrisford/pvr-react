@@ -4,7 +4,7 @@ import 'react-daterange-picker/dist/css/react-calendar.css' // For some basic st
  
 class DateRangeCalendar extends Component {
   constructor(props){
-      super(props)  //-=-=-=-=-=-=-=-=-=- need to add some way of passing props to calendar
+      super(props)  //  -=-=-=-=-=-=-=-=-=- need to pass props to calendar
       this.state = {
             cottage: {},
             dates: null,
@@ -15,6 +15,12 @@ class DateRangeCalendar extends Component {
         }
     }  
 
+  componentDidMount(){
+      this.setState({
+          cottage: this.props.data
+      })
+      console.log('this props ', this.props)
+  }  
   onSelect = dates => this.setState({dates})
     
   bookDates(dates, booking){
@@ -23,7 +29,7 @@ class DateRangeCalendar extends Component {
             start: this.state.dates.start._d,
             end: this.state.dates.end._d
         }
-    })
+    }) // open a modal to confirm, link modal to transaction confirmation page, pass props
     // this.state.cottage.cottageBooked.push(booking);
     
 
@@ -40,7 +46,7 @@ class DateRangeCalendar extends Component {
         <DateRangePicker
           onSelect={this.onSelect}
           value={this.state.dates}
-        />
+        /><br />
         <button type="submit" onClick={() => {this.bookDates(this.state.dates)}} className="waves-effect waves-light btn">Book Your Stay ></button>
       </div>
     )

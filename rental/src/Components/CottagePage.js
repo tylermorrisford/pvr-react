@@ -29,7 +29,7 @@ class CottagePage extends Component{
         // console.log(this.state.cottage.cottageBooked);
         // API.updateCottage(id)
     }     
-// Need to use route, load this component
+
     render() {
         return(
             <div className="container">
