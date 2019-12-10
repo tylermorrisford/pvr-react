@@ -1,9 +1,8 @@
 import React, {Component} from "react";
 // import { Link } from "react-router-dom";
 import API from "../utils/API";
-import DateRangeCalendar from "./DateRangeCalendar";
-// import Calendar from "./Calendar";
-// import DateRangeSelect from "./DateRangeSelect";
+// import DateRangeCalendar from "./DateRangeCalendar";
+import Calendar from "./Calendar";
 // import Iframe from 'react-iframe';
 // import dotenv from 'dotenv';
  
@@ -29,16 +28,13 @@ class CottagePage extends Component{
 
                     </div>
                     <div className="col s12 m6">
-                        {/* <div className="center"><Calendar data={this.state.cottage}/><br/> */}
-                        <div className="center"><DateRangeCalendar data={this.state.cottage}/><br/>
-                        {/* <div className="center"><DateRangeSelect data={this.state.cottage}/><br/> */}
-                        {/* <button type="submit" onClick={() => {}} className="waves-effect waves-light btn">Book Your Stay ></button></div> */}
+                <h5>{this.state.cottage.cottageSlug}</h5>
+                <h5>Sleeps: {this.state.cottage.cottageSleeps}<br/>Beds: {this.state.cottage.cottageBedrooms}<br />Baths: {this.state.cottage.cottageBathrooms}</h5>
                         </div>
 
                     </div>
+                        <div className="center"><Calendar data={this.state.cottage}/><br/>
                 </div>
-                <h5>{this.state.cottage.cottageSlug}</h5>
-                <h6>Sleeps: {this.state.cottage.cottageSleeps}, Beds: {this.state.cottage.cottageBedrooms}, Baths: {this.state.cottage.cottageBathrooms}</h6>
                 <p>{this.state.cottage.cottageDescription}</p>
                 {/* <Iframe 
                     url={this.state.cottage.cottageMap}

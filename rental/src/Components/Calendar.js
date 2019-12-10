@@ -1,40 +1,58 @@
-import React, {Component} from "react";
-import moment from "moment";
+/* eslint-disable react/no-unused-prop-types */
+import React, {Component} from 'react';
 import 'react-dates/initialize';
-import { DayPickerRangeController } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
+import { DateRangePicker } from 'react-dates';
+import moment from 'moment';
 
-class Calendar extends Component {
+class Calendar extends Component{
     constructor(props){
         super(props)
-        this.state = {
-            ready: false
+        this.state ={
+            cottage: {}, 
+            ready: false,
+            startDate: null,
+            endDate: null
         }
     }
 
-componentDidMount(){
-    this.setState({
-        ready: true
-    })
-}
+    componentDidMount(){
+        this.setState({
+            ready:true,
+            cottage: this.props.data
+        }) 
+    }
 
-// open a modal to confirm, link modal to transaction confirmation page, pass props
-// this.state.cottage.cottageBooked.push(booking);
+    bookDates(event){
+        event.preventDefault();
+        if (!this.state.startDate || !this.state.endDate){
+            alert('Please choose reservation dates!');
+        } else {
+            console.log(this.state.startDate)
+        }
+        // find by id, push object with start and end date into cottageBooked
+    }
 
-render(){
-    return(
+    render() {
+
+        return(
             <div>
-             <DayPickerRangeController
-              startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-              endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-              onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-              focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-              onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-              initialVisibleMonth={() => moment().add(2, "M")} // PropTypes.func or null,
+            <DateRangePicker
+                startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+                endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+                onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
             />
-            </div>
-    )
-}
+            <br />
+            <button className="btn" type="submit" onClick={(event)=> this.bookDates(event)}>book them dates</button>
+            </div>    
+        )
+    }
 }
 
-export default Calendar
+
+
+export default Calendar;

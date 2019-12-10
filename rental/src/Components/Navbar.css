@@ -9,4 +9,5 @@ nav .active {
 
 nav {
     overflow: hidden;
+    z-index: 1;
 }
