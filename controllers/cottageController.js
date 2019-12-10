@@ -3,6 +3,7 @@ const db = require("../models");
 // Methods for the cottageController
 module.exports = {
   findAll: function(req, res) {
+    // console.log(req.query);
     db.Cottage
       .find(req.query)
       .sort({ cottageId: 1 })
@@ -12,6 +13,12 @@ module.exports = {
   findById: function(req, res) {
     db.Cottage
       .findById(req.params.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByLocation: function(req, res) {
+    db.Cottage
+      .find({cottageLocation: req.params.location})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

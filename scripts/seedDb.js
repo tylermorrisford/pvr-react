@@ -8,12 +8,13 @@ mongoose.connect(
   "mongodb://localhost/peninsulavacationrentals"
 );
 
-const cottages = [
+const cottagelist = [
     {
         cottageId: 1,
         cottageName: "Cedarwood",
         cottageLocation: "Leland",
         cottageImage: "/assets/images/cardPhotos/cedarwood-card.jpg",
+        cottageMap: "",
         cottagePerNight: 719,
         cottagePerWeek: 5000,
         cottageSleeps: 8,
@@ -30,6 +31,7 @@ const cottages = [
         cottageName: "Holly's House",
         cottageLocation: "Leland",
         cottageImage: "/assets/images/cardPhotos/holly-card.jpg",
+        cottageMap: "",
         cottagePerNight: 245,
         cottagePerWeek: 1750,
         cottageSleeps: 4,
@@ -46,6 +48,7 @@ const cottages = [
         cottageName: "Maria's Sunset Shore",
         cottageLocation: "Lake Leelanau",
         cottageImage: "/assets/images/cardPhotos/maria-card.jpg",
+        cottageMap: "",
         cottagePerNight: 464,
         cottagePerWeek: 3200,
         cottageSleeps: 8,
@@ -62,6 +65,7 @@ const cottages = [
         cottageName: "Lake Michigan Delight",
         cottageLocation: "Lake Michigan",
         cottageImage: "/assets/images/cardPhotos/delight-card.jpg",
+        cottageMap: "",
         cottagePerNight: 593,
         cottagePerWeek: 5950,
         cottageSleeps: 14,
@@ -78,6 +82,7 @@ const cottages = [
         cottageName: "The Maples",
         cottageLocation: "Northport",
         cottageImage: "/assets/images/cardPhotos/maples-card.jpg",
+        cottageMap: "",
         cottagePerNight: 173,
         cottagePerWeek: 2000,
         cottageSleeps: 6,
@@ -94,6 +99,7 @@ const cottages = [
         cottageName: "The Otherside",
         cottageLocation: "Leland",
         cottageImage: "/assets/images/cardPhotos/otherside-card.jpg",
+        cottageMap: "",
         cottagePerNight: 243,
         cottagePerWeek: 2000,
         cottageSleeps: 6,
@@ -110,6 +116,7 @@ const cottages = [
         cottageName: "The Little Bridge",
         cottageLocation: "Lake Leelanau",
         cottageImage: "/assets/images/cardPhotos/bridge-card.jpg",
+        cottageMap: "",
         cottagePerNight: 313,
         cottagePerWeek: 2100,
         cottageSleeps: 6,
@@ -126,6 +133,8 @@ const cottages = [
         cottageName: "Ryan's Way",
         cottageLocation: "Lake Leelanau",
         cottageImage: "/assets/images/cardPhotos/ryans-card.jpg",
+        cottageMap: "",
+        cottageMap: "",
         cottagePerNight: 450,
         cottagePerWeek: 3200,
         cottageSleeps: 8,
@@ -142,6 +151,7 @@ const cottages = [
         cottageName: "Leland Lake Life",
         cottageLocation: "Lake Michigan",
         cottageImage: "/assets/images/cardPhotos/lelandlakelife-card.jpg",
+        cottageMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22570.09556178398!2d-85.77487433445074!3d44.999302282346044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d4b32162fceef33%3A0x3d66773b0f735147!2s151+Birch+Landing+Dr%2C+Lake+Leelanau%2C+MI+49653!5e0!3m2!1sen!2sus!4v1550986536022",
         cottagePerNight: 450,
         cottagePerWeek: 3850,
         cottageSleeps: 8,
@@ -158,6 +168,7 @@ const cottages = [
         cottageName: "Twin Birch",
         cottageLocation: "Lake Leelanau",
         cottageImage: "/assets/images/cardPhotos/twinbirch-card.jpg",
+        cottageMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11282.292758785106!2d-85.72890816728848!3d45.04401908373432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d4b2fbbaa2712bf%3A0x1634863f0830031!2s4265+N+Lake+Leelanau+Dr%2C+Lake+Leelanau%2C+MI+49653!5e0!3m2!1sen!2sus!4v1550993744665",
         cottagePerNight: 575,
         cottagePerWeek: 5000,
         cottageSleeps: 9,
@@ -174,6 +185,7 @@ const cottages = [
         cottageName: "Penwood Estate",
         cottageLocation: "Leland",
         cottageImage: "/assets/images/cardPhotos/penwood-card.jpg",
+        cottageMap: "",
         cottagePerNight: 1000,
         cottagePerWeek: 7000,
         cottageSleeps: 20,
@@ -190,6 +202,7 @@ const cottages = [
         cottageName: "Irwin Cottage",
         cottageLocation: "Little Traverse Lake",
         cottageImage: "/assets/images/cardPhotos/irwin-card.jpg",
+        cottageMap: "",
         cottagePerNight: 325,
         cottagePerWeek: 3250,
         cottageSleeps: 10,
@@ -206,6 +219,7 @@ const cottages = [
         cottageName: "Beauvais Cottage",
         cottageLocation: "Little Traverse Lake",
         cottageImage: "/assets/images/cardPhotos/beauvais-card.jpg",
+        cottageMap: "",
         cottagePerNight: 250,
         cottagePerWeek: 1750,
         cottageSleeps: 6,
@@ -223,9 +237,9 @@ const cottages = [
 // empties db and inserts all cottages 
 db.Cottage
   .remove({})
-  .then(() => db.Cottage.collection.insertMany(cottages))
+  .then(() => db.Cottage.insertMany(cottagelist))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
+    console.log(" records inserted!");
     process.exit(0);
   })
   .catch(err => {

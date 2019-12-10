@@ -2,6 +2,7 @@ import React, {Component} from "react";
 // import { Link } from "react-router-dom";
 import API from "../utils/API";
 import DateRangeCalendar from "./DateRangeCalendar";
+// import Calendar from "./Calendar";
 // import DateRangeSelect from "./DateRangeSelect";
 // import Iframe from 'react-iframe';
 // import dotenv from 'dotenv';
@@ -16,19 +17,7 @@ class CottagePage extends Component{
             .then(res => this.setState({ cottage: res.data }))
             .catch(err => console.log(err));
           }
-
-    bookDates() {
-        // api. booking dates to db, using put route
-        // console.log(this.state.cottage.cottageBooked);
-        // this.setState({
-        //     booking: {
-        //         start: this.state.dates.start,
-        //         end: this.state.dates.end
-        //     } // this.state.cottage.cottageBooked.push(this.state.booking)
-        // })
-        // console.log(this.state.cottage.cottageBooked);
-        // API.updateCottage(id)
-    }     
+   
 
     render() {
         return(
@@ -40,6 +29,7 @@ class CottagePage extends Component{
 
                     </div>
                     <div className="col s12 m6">
+                        {/* <div className="center"><Calendar data={this.state.cottage}/><br/> */}
                         <div className="center"><DateRangeCalendar data={this.state.cottage}/><br/>
                         {/* <div className="center"><DateRangeSelect data={this.state.cottage}/><br/> */}
                         {/* <button type="submit" onClick={() => {}} className="waves-effect waves-light btn">Book Your Stay ></button></div> */}

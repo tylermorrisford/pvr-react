@@ -5,6 +5,10 @@ export default {
   getCottages: function() {
     return axios.get("/api/cottages");
   },
+  // Gets all Leland cottages
+  getCottagesLocation: function(location) {
+    return axios.get("/api/location/" + location);
+  },
   // Gets the cottage with the given id
   getCottage: function(id) {
     return axios.get("/api/cottages/" + id);

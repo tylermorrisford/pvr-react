@@ -2,6 +2,7 @@
   "name": "rental",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
@@ -13,6 +14,7 @@
     "react": "^16.12.0",
     "react-date-range": "^1.0.0-beta",
     "react-datepicker": "^2.10.1",
+    "react-dates": "^21.5.0",
     "react-dom": "^16.12.0",
     "react-fontawesome": "^1.7.1",
     "react-iframe": "^1.8.0",

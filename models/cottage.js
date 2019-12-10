@@ -17,7 +17,8 @@ const cottageSchema = new Schema({ // update scheme with cottage details
   cottagePets: { type: Boolean, default: false },
   cottageBooked: Array,
   date: { type: Date, default: Date.now }
-});
+},
+{collection: "cottage"});
 
 // add array of cottagePhotos, 
 
