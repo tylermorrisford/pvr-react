@@ -3,7 +3,8 @@ import React, {Component} from 'react';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker } from 'react-dates';
-import moment from 'moment';
+// import moment from 'moment';
+// import API from '../utils/API';
 
 class Calendar extends Component{
     constructor(props){
@@ -28,7 +29,8 @@ class Calendar extends Component{
         if (!this.state.startDate || !this.state.endDate){
             alert('Please choose reservation dates!');
         } else {
-            console.log(this.state.startDate)
+            console.log('start: ', this.state.startDate._d, 'end: ', this.state.endDate._d)
+            // API.updateCottage(this.state.cottage._id)
         }
         // find by id, push object with start and end date into cottageBooked
     }
