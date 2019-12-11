@@ -46,7 +46,7 @@ class Admin extends Component {
         <div className="container">
             <div className="row">
                 <div className="col m6 s12">
-        <h5>Add New Cottage:</h5>
+        <h5>Add A New Cottage:</h5>
         <AddForm reload={() => {this.reload()}} />
         <hr />
                 </div>
