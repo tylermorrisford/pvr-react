@@ -110,9 +110,11 @@ input[type="cottageBathrooms"]
 }
 
 .spinner-wrapper {
-  padding-top: 50px;
+  display: block;
+  padding-top: 100px;
   margin: 0 auto;
   min-height: 200px;
+  text-align: center;
 }
 
 .navbar-fixed {
