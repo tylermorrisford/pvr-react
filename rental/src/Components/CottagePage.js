@@ -21,13 +21,13 @@ class CottagePage extends Component {
             .then(res => this.setState({ cottage: res.data }))
             .catch(err => console.log(err));
 
-        API.getReservations(this.props.match.params.id)
-            .then(res => this.setState({ reservations: res.data }))
-            .catch(err => console.log(err));    
+        // API.getReservations(this.props.match.params.id)
+        //     .then(res => this.setState({ reservations: res.data }))
+        //     .catch(err => console.log(err));    
 
         this.setState({
             ready: true
-        })    
+        })
     }
 
     render() {
@@ -39,7 +39,7 @@ class CottagePage extends Component {
                     <FontAwesomeIcon icon="circle-notch" size="6x" spin />
                 </div>
             )
-        } 
+        }
 
 
         return (
@@ -51,16 +51,20 @@ class CottagePage extends Component {
 
                     </div>
                     <div className="col s12 m6">
-                        <h5>{this.state.cottage.cottageSlug}</h5>
-                        <h5>Sleeps: {this.state.cottage.cottageSleeps}<br />Beds: {this.state.cottage.cottageBedrooms}<br />Baths: {this.state.cottage.cottageBathrooms}</h5>
-                        {/* <ul className="collection">{reservationList}</ul> */}
+                <div className="card">
+                    <div className="card-content">
+                        <span className="card-title">{this.state.cottage.cottageName} in  {this.state.cottage.cottageLocation}, MI</span>
+                        <div className="center">See available dates:<br />
+                    {this.state.cottage._id && <Calendar data={this.state.cottage} />}<br />
+                </div>
+                    </div>
+                </div>
+
                     </div>
 
                 </div>
-
-                <div className="center">See available dates:<br />
-                {this.state.cottage._id && <Calendar data={this.state.cottage} />}<br />
-                </div>
+                <h5>{this.state.cottage.cottageSlug}</h5>
+                        <h6>Sleeps {this.state.cottage.cottageSleeps}, with {this.state.cottage.cottageBedrooms} bedrooms/{this.state.cottage.cottageBathrooms} bathrooms</h6>
                 <p>{this.state.cottage.cottageDescription}</p>
                 {/* <Iframe 
                     url={this.state.cottage.cottageMap}
