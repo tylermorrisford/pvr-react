@@ -1,3 +1,4 @@
 module.exports = {
-  Cottage: require("./cottage")
+  Cottage: require("./cottage"),
+  Reservation: require("./reservation")
 };

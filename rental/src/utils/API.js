@@ -17,12 +17,17 @@ export default {
   deleteCottage: function(id) {
     return axios.delete("/api/cottages/" + id);
   },
-  // Update the cottage with the given id -- most recently added!
-  updateCottage: function(id) {
-    return axios.put("/api/cottages/" + id);
-  },
   // Saves a cottage to the database
   saveCottage: function(cottageData) {
     return axios.post("/api/cottages", cottageData);
+  },
+  // Saves a cottage to the database
+  saveReservation: function(reservation) {
+    console.log('json reservation', JSON.stringify(reservation));
+    return axios.post("/api/reservation/", reservation);
+  },
+  // Saves a cottage to the database
+  getReservations: function(id) {
+    return axios.get("/api/reservation/" + id);
   }
-};
+}; // add delete reservation
