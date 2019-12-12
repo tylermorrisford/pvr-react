@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku) // ------------------ This will need to be updated before deployment
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("rental/public"));
+  app.use(express.static("rental/build"));
 }
 // Add routes, both API and view
 app.use(routes);
