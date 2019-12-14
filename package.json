@@ -32,9 +32,7 @@
     "moment-range": "^4.0.2",
     "mongoose": "^5.7.12",
     "nodemailer": "^6.4.1",
-    "passport": "^0.4.0",
-    "react-calendar": "^2.19.2",
-    "react-daterange-picker": "^2.0.1",
-    "react-dom": "^16.12.0"
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.0"
   }
 }
