@@ -9,10 +9,11 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'rental/*'\" \"npm run rental\"",
-    "build": "node scripts/build.js",
     "seed": "node scripts/seedDb.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "cd rental && npm install && npm run build"
+    "install": "cd rental && npm install",
+    "build": "cd rental && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
