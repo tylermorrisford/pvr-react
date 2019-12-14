@@ -1,14 +1,8 @@
 import React, {Component} from "react";
 import {NavLink} from "react-router-dom";
 import "./Navbar.css";
-// import M from "materialize-css/dist/js/materialize.min.js";
 
 class Navbar extends Component {
-
-    // componentDidMount(){
-    //     M.AutoInit();
-    // }
-
 
     render() {
 

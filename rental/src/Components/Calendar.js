@@ -4,6 +4,7 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker } from 'react-dates';
 import moment from 'moment';
+import { Modal, Button } from 'react-materialize';
 import API from '../utils/API';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
@@ -25,8 +26,7 @@ class Calendar extends Component {
     }
 
     componentDidMount() {
-        var elems1 = document.querySelectorAll(".modal");
-        var instances1 = this.M.Modal.init(elems1);
+
         console.log('props data from cottage page: ', this.props.data);
         API.getReservations(this.props.data._id)
             .then(res => {
@@ -66,7 +66,6 @@ class Calendar extends Component {
         // find by id, push object with start and end date into cottageBooked
         // trigger modal - direct modal to shopping cart page with stripe
 
-
     }
     isBlocked = day => {
         // const availableDates = ["2019-12-21", "2019-12-24", "2019-12-25", "2019-12-30"];
@@ -90,6 +89,7 @@ class Calendar extends Component {
         return (
             <div>
                 <DateRangePicker
+                    anchorDirection="right"
                     startDate={this.state.startDate} // momentPropTypes.momentObj or null,
                     startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
                     endDate={this.state.endDate} // momentPropTypes.momentObj or null,
@@ -100,109 +100,40 @@ class Calendar extends Component {
                     startDatePlaceholderText=" Check-in"
                     focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
                     onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-                    orientation="vertical"
-                    verticalHeight={568}
+                    orientation="horizontal"
+                    // verticalHeight={568}
+                    // isDayHighlighted={function noRefCheck() { }}
+                    // isOutsideRange={function noRefCheck() { }}
                     isDayBlocked={this.isBlocked}
                 />
-                {/* <DateRangePickerWrapper
-                    anchorDirection="left"
-                    autoFocus={false}
-                    autoFocusEndDate={false}
-                    block={false}
-                    customArrowIcon={null}
-                    customCloseIcon={null}
-                    customInputIcon={null}
-                    disabled={false}
-                    displayFormat={function noRefCheck() { }}
-                    enableOutsideDays={false}
-                    endDateId="endDate"
-                    endDatePlaceholderText="Check-out"
-                    horizontalMargin={0}
-                    initialEndDate={null}
-                    initialStartDate={null}
-                    initialVisibleMonth={null}
-                    isDayBlocked={function noRefCheck() { }}
-                    isDayHighlighted={function noRefCheck() { }}
-                    isOutsideRange={function noRefCheck() { }}
-                    isRTL={false}
-                    keepOpenOnDateSelect={false}
-                    minimumNights={1}
-                    monthFormat="MMMM YYYY"
-                    navNext={null}
-                    navPosition="navPositionTop"
-                    navPrev={null}
-                    numberOfMonths={2}
-                    onClose={function noRefCheck() { }}
-                    onNextMonthClick={function noRefCheck() { }}
-                    onPrevMonthClick={function noRefCheck() { }}
-                    orientation="vertical"
-                    phrases={{
-                        calendarLabel: 'Calendar',
-                        chooseAvailableEndDate: function noRefCheck() { },
-                        chooseAvailableStartDate: function noRefCheck() { },
-                        clearDates: 'Clear Dates',
-                        closeDatePicker: 'Close',
-                        dateIsSelected: function noRefCheck() { },
-                        dateIsSelectedAsEndDate: function noRefCheck() { },
-                        dateIsSelectedAsStartDate: function noRefCheck() { },
-                        dateIsUnavailable: function noRefCheck() { },
-                        enterKey: 'Enter key',
-                        escape: 'Escape key',
-                        focusStartDate: 'Interact with the calendar and add the check-in date for your trip.',
-                        hideKeyboardShortcutsPanel: 'Close the shortcuts panel.',
-                        homeEnd: 'Home and end keys',
-                        jumpToNextMonth: 'Move forward to switch to the next month.',
-                        jumpToPrevMonth: 'Move backward to switch to the previous month.',
-                        keyboardBackwardNavigationInstructions: 'Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.',
-                        keyboardForwardNavigationInstructions: 'Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.',
-                        keyboardShortcuts: 'Keyboard Shortcuts',
-                        leftArrowRightArrow: 'Right and left arrow keys',
-                        moveFocusByOneDay: 'Move backward (left) and forward (right) by one day.',
-                        moveFocusByOneMonth: 'Switch months.',
-                        moveFocusByOneWeek: 'Move backward (up) and forward (down) by one week.',
-                        moveFocustoStartAndEndOfWeek: 'Go to the first or last day of a week.',
-                        openThisPanel: 'Open this panel.',
-                        pageUpPageDown: 'page up and page down keys',
-                        questionMark: 'Question mark',
-                        returnFocusToInput: 'Return to the date input field.',
-                        roleDescription: 'datepicker',
-                        selectFocusedDate: 'Select the date in focus.',
-                        showKeyboardShortcutsPanel: 'Open the keyboard shortcuts panel.',
-                        upArrowDownArrow: 'up and down arrow keys'
-                    }}
-                    regular={false}
-                    renderCalendarDay={undefined}
-                    renderDayContents={null}
-                    renderMonthText={null}
-                    reopenPickerOnClearDates={false}
-                    required={false}
-                    screenReaderInputMessage=""
-                    showClearDates={false}
-                    showDefaultInputIcon={false}
-                    small={false}
-                    startDateId="startDate"
-                    startDatePlaceholderText=" Check-in"
-                    stateDateWrapper={function noRefCheck() { }}
-                    verticalHeight={568}
-                    withFullScreenPortal={false}
-                    withPortal={false}
-                    isDayBlocked={this.isBlocked}
-                /> */}
+                
                 <br /><br />
-                <button className="btn" data-target="modal1" type="submit" onClick={(event) => this.bookDates(event)}>Reserve these dates</button>
+                <Modal
+                    actions={[
+                        <Button flat modal="close" node="button" waves="green">Confirm ></Button>
+                    ]}
+                    bottomSheet
+                    fixedFooter={false}
+                    header="Reservation Details"
+                    id="modal-0"
+                    options={{
+                        dismissible: true,
+                        endingTop: '10%',
+                        inDuration: 250,
+                        onCloseEnd: null,
+                        onCloseStart: null,
+                        onOpenEnd: null,
+                        onOpenStart: null,
+                        opacity: 0.5,
+                        outDuration: 250,
+                        preventScrolling: true,
+                        startingTop: '4%'
+                    }}
+                    trigger={<Button node="button" type="submit" onClick={(event) => this.bookDates(event)}>Reserve these dates</Button>}
+                ><h5>Your stay at {this.props.data.cottageName}:</h5>
+                    <h6>Check-in: {this.state.startDate ? this.state.startDate._d : "No check-in dates selected"} || Check-out: {this.state.endDate ? this.state.endDate._d : "No check-out dates selected"}</h6>
+                </Modal>
 
-
-                <div id="modal1" className="modal bottom-sheet">
-                    <div className="modal-content">
-                        <h4>Reservation Details</h4>
-                        <p>{this.props.data.cottageName}</p>
-                        <p>Check-in: </p>
-                        <p>Check-out: </p>
-                    </div>
-                    <div className="modal-footer">
-                        <a href="/confirmation/:id" className="modal-close waves-effect waves-green btn-flat">Confirm Reservation</a>
-                    </div>
-                </div>
             </div>
         )
     }
