@@ -69,7 +69,9 @@ class Calendar extends Component {
 
     }
     isBlocked = day => {
-        return this.state.reservations.some(date => day.isSame(date), 'day')
+        // const availableDates = ["2019-12-21", "2019-12-24", "2019-12-25", "2019-12-30"];
+        // return !blockedDates.some(date => day.isSame(date), 'day')
+        // return this.state.reservations.some(date => day.isSame(date), 'day')
     }
 
     render() {
@@ -94,10 +96,12 @@ class Calendar extends Component {
                     endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
                     endDatePlaceholderText="Check-out"
                     onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                    minimumNights={3}
                     startDatePlaceholderText=" Check-in"
                     focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
                     onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
                     orientation="vertical"
+                    verticalHeight={568}
                     isDayBlocked={this.isBlocked}
                 />
                 {/* <DateRangePickerWrapper
