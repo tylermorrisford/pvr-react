@@ -9,6 +9,7 @@ import NoMatch from "./Pages/NoMatch";
 import About from "./Components/About";
 import CottagePage from './Components/CottagePage';
 import Footer from "./Components/Footer";
+import Confirmation from "./Pages/Confirmation";
 import Admin from "./Pages/Admin";
 import Leland from './Pages/Leland';
 // import LakeLeelanau from './Pages/LakeLeelanau';
@@ -41,6 +42,7 @@ const App = () => {
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route exact path="/cottages/:id" component={CottagePage} />
+      <Route exact path="/confirmation" component={Confirmation} />
       <Route exact path="/admin" component={Admin} /> 
       <Route component={NoMatch} />
       </Switch>

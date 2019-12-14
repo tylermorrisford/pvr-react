@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unused-prop-types */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker } from 'react-dates';
@@ -20,9 +21,11 @@ class Calendar extends Component {
             ready: false,
             startDate: null,
             endDate: null,
-            reservations: []
+            reservations: [],
+            reservationStart: null,
+            reservationEnd: null,
+            reservationLength: null,
         }
-        this.M = window.M;
     }
 
     componentDidMount() {
@@ -50,7 +53,13 @@ class Calendar extends Component {
             let resLength = Math.abs(resStart.diff(resEnd, 'days'));
             // for actual number of nights, use resLength - 1
             console.log('start: ', resStart, 'end: ', resEnd, 'reservation length: ', resLength);
-            console.log(new Date(this.state.startDate._d))
+            this.setState({
+                reservationStart: resStart,
+                reservationEnd: resEnd,
+                reservationLength: resLength - 1,
+
+            })
+            console.log('new date with startDate: ', new Date(this.state.startDate._d))
             let reservation = {
                 cottageId: this.props.data._id,
                 startDate: this.state.startDate._d,
@@ -110,7 +119,7 @@ class Calendar extends Component {
                 <br /><br />
                 <Modal
                     actions={[
-                        <Button flat modal="close" node="button" waves="green">Confirm ></Button>
+                        <Button flat modal="close" node="button" to="/confirmation" renderas={Link} data={this.state} waves="green">Confirm ></Button>
                     ]}
                     bottomSheet
                     fixedFooter={false}
@@ -131,7 +140,7 @@ class Calendar extends Component {
                     }}
                     trigger={<Button node="button" type="submit" onClick={(event) => this.bookDates(event)}>Reserve these dates</Button>}
                 ><h5>Your stay at {this.props.data.cottageName}:</h5>
-                    <h6>Check-in: {this.state.startDate ? this.state.startDate._d : "No check-in dates selected"} || Check-out: {this.state.endDate ? this.state.endDate._d : "No check-out dates selected"}</h6>
+                    <h6>Check-in: {this.state.reservationStart ? this.state.reservationStart : "No check-in dates selected"} || Check-out: {this.state.reservationEnd ? this.state.reservationStart : "No check-out dates selected"}</h6>
                 </Modal>
 
             </div>
