@@ -28,6 +28,7 @@ class Calendar extends Component {
         }
     }
 
+
     componentDidMount() {
 
         console.log('props data from cottage page: ', this.props.data);
@@ -43,8 +44,8 @@ class Calendar extends Component {
         })
     }
 
-    chooseDates(event) {
-        event.preventDefault();
+    chooseDates = () => {
+        // event.preventDefault();
         if (!this.state.startDate || !this.state.endDate) {
             alert('Please click \'Start Date\' or  \'End Date\' to choose reservation dates.');
         } else {
@@ -56,17 +57,12 @@ class Calendar extends Component {
             this.setState({
                 reservationStart: resStart,
                 reservationEnd: resEnd,
-                reservationLength: resLength - 1,
+                reservationLength: resLength - 1
+            });
 
-            })
-            console.log('new date with startDate: ', new Date(this.state.startDate._d))
-            let reservation = {
-                cottageId: this.props.data._id,
-                startDate: this.state.startDate._d,
-                endDate: this.state.endDate._d
-            };
-            API.saveReservation(reservation)
-                .catch(err => console.log(err));
+
+
+            // this.modalButton.click()
         }
 
         // new Date()
@@ -74,8 +70,12 @@ class Calendar extends Component {
 
         // find by id, push object with start and end date into cottageBooked
         // trigger modal - direct modal to shopping cart page with stripe
-
     }
+
+    formatDate = (date) => {
+        return date.format("MM-DD-YYYY");
+    }
+
     isBlocked = day => {
         // const availableDates = ["2019-12-21", "2019-12-24", "2019-12-25", "2019-12-30"];
         // return !blockedDates.some(date => day.isSame(date), 'day')
@@ -115,13 +115,13 @@ class Calendar extends Component {
                     // isOutsideRange={function noRefCheck() { }}
                     isDayBlocked={this.isBlocked}
                 />
-                
+
                 <br /><br />
 
 
                 <Modal
                     actions={[
-                        <Link modal="close" node="button" to="/confirmation" renderas={Link} data={this.state} waves="green">Confirm ></Link>
+                        <Link modal="close" node="button" to={`/confirmation/${this.state.reservationStart ? this.formatDate(this.state.reservationStart) : ""}/${this.state.reservationEnd ? this.formatDate(this.state.reservationEnd) : ""}/${this.state.reservationLength ? this.state.reservationLength : ""}/${this.props.data._id}`} renderas={Link} data={this.state} waves="green">Confirm ></Link>
                     ]}
                     bottomSheet
                     fixedFooter={false}
@@ -134,16 +134,16 @@ class Calendar extends Component {
                         onCloseEnd: null,
                         onCloseStart: null,
                         onOpenEnd: null,
-                        onOpenStart: null,
+                        onOpenStart: this.chooseDates,
                         opacity: 0.5,
                         outDuration: 250,
                         preventScrolling: true,
                         startingTop: '4%'
                     }}
-                    trigger={<Button node="button" onClick={(event) => this.chooseDates(event)}>Reserve these dates</Button>}
-                ><div className="container"><h5>Your stay at {this.props.data.cottageName}:</h5>
-                    <h6>Check-in: {this.state.reservationStart ? this.state.reservationStart : "No check-in dates selected"} || Check-out: {this.state.reservationEnd ? this.state.reservationStart : "No check-out dates selected"}</h6>
-                    <h6>Reservation total ${(this.props.data.cottagePerNight * this.state.reservationLength)}</h6>
+                    trigger={<Button style={{ display: 'hidden' }} ref={button => this.modalButton = button} node="button">Reserve these dates</Button>}>
+                    <div className="container"><h5>Your stay at {this.props.data.cottageName}:</h5>
+                        <h6>Check-in: {this.state.reservationStart ? this.state.reservationStart.format('MM-DD-YYYY') : "No check-in dates selected"} || Check-out: {this.state.reservationEnd ? this.state.reservationEnd.format('MM-DD-YYYY') : "No check-out dates selected"}</h6>
+                        <h6>Reservation total ${(this.props.data.cottagePerNight * this.state.reservationLength)}</h6>
                     </div>
                 </Modal>
 

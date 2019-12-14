@@ -17,17 +17,39 @@ class Confirmation extends Component {
         super(props)
         this.state = {
             ready: false,
-            cottage: {}
-
-
+            cottage: {},
+            reservationStart: null,
+            reservationEnd: null,
+            reservationLength: null,
+            reservationCost: null
         }
     }
     // methods for calculation
 
     componentDidMount(){
+
+        API.getCottage(this.props.match.params.cottageId)
+            .then(res => this.setState({ cottage: res.data }))
+            .catch(err => console.log(err));
+
+        this.setState({
+            reservationStart: this.props.match.params.reservationStart,
+            reservationEnd: this.props.match.params.reservationEnd,
+            reservationLength: this.props.match.params.reservationLength,
+            ready: true
+
+        })
         
-        // API.getCottage(this.props.match.params.id)
-        // .then(res => this.setState({ cottage: res.data }))
+
+            // console.log('new date with startDate: ', new Date(this.state.startDate._d))
+            // let reservation = {
+            //     cottageId: this.props.data._id,
+            //     startDate: this.state.startDate._d,
+            //     endDate: this.state.endDate._d
+            // };
+
+
+        // API.saveReservation(reservation)
         // .catch(err => console.log(err));
 
         this.setState({

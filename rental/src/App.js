@@ -42,7 +42,7 @@ const App = () => {
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route exact path="/cottages/:id" component={CottagePage} />
-      <Route exact path="/confirmation" component={Confirmation} />
+      <Route exact path="/confirmation/:startDate/:endDate/:reservationLength/:cottageId" component={Confirmation} />
       <Route exact path="/admin" component={Admin} /> 
       <Route component={NoMatch} />
       </Switch>
