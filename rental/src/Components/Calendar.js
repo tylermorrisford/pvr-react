@@ -43,7 +43,7 @@ class Calendar extends Component {
         })
     }
 
-    bookDates(event) {
+    chooseDates(event) {
         event.preventDefault();
         if (!this.state.startDate || !this.state.endDate) {
             alert('Please click \'Start Date\' or  \'End Date\' to choose reservation dates.');
@@ -117,9 +117,11 @@ class Calendar extends Component {
                 />
                 
                 <br /><br />
+
+
                 <Modal
                     actions={[
-                        <Button flat modal="close" node="button" to="/confirmation" renderas={Link} data={this.state} waves="green">Confirm ></Button>
+                        <Link modal="close" node="button" to="/confirmation" renderas={Link} data={this.state} waves="green">Confirm ></Link>
                     ]}
                     bottomSheet
                     fixedFooter={false}
@@ -138,9 +140,11 @@ class Calendar extends Component {
                         preventScrolling: true,
                         startingTop: '4%'
                     }}
-                    trigger={<Button node="button" type="submit" onClick={(event) => this.bookDates(event)}>Reserve these dates</Button>}
-                ><h5>Your stay at {this.props.data.cottageName}:</h5>
+                    trigger={<Button node="button" onClick={(event) => this.chooseDates(event)}>Reserve these dates</Button>}
+                ><div className="container"><h5>Your stay at {this.props.data.cottageName}:</h5>
                     <h6>Check-in: {this.state.reservationStart ? this.state.reservationStart : "No check-in dates selected"} || Check-out: {this.state.reservationEnd ? this.state.reservationStart : "No check-out dates selected"}</h6>
+                    <h6>Reservation total ${(this.props.data.cottagePerNight * this.state.reservationLength)}</h6>
+                    </div>
                 </Modal>
 
             </div>

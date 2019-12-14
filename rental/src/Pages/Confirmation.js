@@ -16,7 +16,8 @@ class Confirmation extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            ready: false
+            ready: false,
+            cottage: {}
 
 
         }
@@ -25,7 +26,7 @@ class Confirmation extends Component {
 
     componentDidMount(){
         
-        // API.getCottage(this.props.?)
+        // API.getCottage(this.props.match.params.id)
         // .then(res => this.setState({ cottage: res.data }))
         // .catch(err => console.log(err));
 
@@ -55,7 +56,7 @@ class Confirmation extends Component {
                     <div className="col s12 m6">
                         <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
                             <div className="example">
-                                <h1>Reserve Your Stay</h1>
+                                <h5>Enter your payment details</h5>
                                 <Elements>
                                     <CheckoutForm />
                                 </Elements>

@@ -20,7 +20,7 @@ class CheckoutForm extends Component {
         <CardElement />
         <hr />
         <br />
-        <Button waves onClick={this.submit}>Purchase</Button>
+        <Button waves="light" onClick={this.submit}>Purchase</Button>
       </div>
     );
   }
