@@ -1,6 +1,8 @@
 # Peninsula Vacation Rentals
 
 A single-page Mern App for a vacation property rental business(build in progress)
+[Check out the app>](https://peninsulavacationrentals.herokuapp.com/)
+
 
 ## Index
 1. Problem it solves
