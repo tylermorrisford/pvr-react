@@ -3,6 +3,7 @@ import React, { Component} from "react";
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import { Modal, Button } from 'react-materialize';
+import ReservationCard from "../Components/ReservationCard";
 import API from '../utils/API';
 // import stripe
 import { Elements, StripeProvider } from 'react-stripe-elements';
@@ -73,7 +74,7 @@ class Confirmation extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col s12 m6">
-                        <h1>hi</h1>{/* <Card /> */}
+                        <ReservationCard data={this.state.cottage} resLength={this.state.reservationLength}/>
                     </div>
                     <div className="col s12 m6">
                         <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
