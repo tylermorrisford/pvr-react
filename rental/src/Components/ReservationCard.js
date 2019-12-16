@@ -11,8 +11,8 @@ const ReservationCard = (props) => {
             <span className="card-title cottage-title">{props.data.cottageName}</span>
           </div>
           <div className="card-content">
-            <p>Your {props.resLength}-night stay at {props.data.cottageName} in {props.data.cottageLocation}{" "} 
-            totals ${(props.resLength * props.data.cottagePerNight)}</p>
+            <p>For your {props.resLength}-night stay at {props.data.cottageName} in {props.data.cottageLocation}:<br />
+            subtotal ${ props.resLength === 6 ? props.data.cottagePerWeek : (props.resLength * props.data.cottagePerNight)}</p>
           </div>
         </div>
 
