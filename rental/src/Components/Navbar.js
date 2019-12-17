@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import "./Navbar.css";
 // import { Navbar, Icon, NavItem, Dropdown } from 'react-materialize';
 
-class Nav extends Component {
+class Navbar extends Component {
 
     render() {
 
@@ -47,7 +47,7 @@ class Nav extends Component {
         )
     }
 }
-export default Nav
+export default Navbar
 
 
 // image logo:  <img alt="logo" src="/assets/images/pvr-logo2.png" />
