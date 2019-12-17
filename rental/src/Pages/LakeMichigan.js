@@ -47,7 +47,7 @@ class LakeMichigan extends Component {
                 </div>
               </div>
                 <div className="container">
-                    <p>Lake Michigan is simply breathtaking. The lake has so many beaches that it’s referred to as America’s “Third Coast”. Whether you plan to swim, play in the sand, or just watch a spectacular sunset, the shores of Lake Michigan are the perfect place to unplug and unwind.</p>
+                    <p><b>Lake Michigan</b> is simply breathtaking. The lake has so many beaches that it’s referred to as America’s “Third Coast”. Whether you plan to swim, play in the sand, or just watch a spectacular sunset, the shores of Lake Michigan are the perfect place to unplug and unwind.</p>
                     <div className="row flex-container">
                         {lakemichiganCottages}
                     </div>

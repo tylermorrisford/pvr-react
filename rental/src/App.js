@@ -7,6 +7,7 @@ import Destinations from "./Pages/Destinations";
 import ViewAll from "./Pages/ViewAll";
 import NoMatch from "./Pages/NoMatch";
 import About from "./Components/About";
+import Contact from "./Pages/Contact";
 import CottagePage from './Components/CottagePage';
 import Footer from "./Components/Footer";
 import Confirmation from "./Pages/Confirmation";
@@ -17,14 +18,6 @@ import Northport from './Pages/Northport';
 import LittleTraverseLake from './Pages/LittleTraverseLake';
 import LakeMichigan from "./Pages/LakeMichigan";
 
-
-const Contact = () => {
-  return  <div className="northport">
-            <div className="valign-wrapper callout">
-              <h2>Contact us</h2>
-            </div>
-          </div>
-}
 // Add Auth0 on Admin route
 const App = () => {
   return (

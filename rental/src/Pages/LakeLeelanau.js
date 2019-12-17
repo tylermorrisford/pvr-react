@@ -50,7 +50,7 @@ class LakeLeelanau extends Component {
                         </div>
                     </div>
                     <div className="container">
-                        <p>The village of Lake Leelanau sits along M-204 at the “narrows” between North & South Lake Leelanau, making it a prime location for boating and swimming!</p>
+                        <p>The village of <b>Lake Leelanau</b> sits along M-204 at the “narrows” between North & South Lake Leelanau, making it a prime location for boating and swimming!</p>
                         <div className="row flex-container">
                             {leelanauCottages}
                         </div>

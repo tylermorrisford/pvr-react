@@ -47,7 +47,7 @@ class LittleTraverseLake extends Component {
                 </div>
               </div>
                 <div className="container">
-                    <p>Little Traverse is a 640 acre lake located in north central Leelanau County, Cleveland Township, Michigan. Maximum depth is apx. 54ft. The lake lies just south of a portion of Sleeping Bear Dunes National Lakeshore. Little Traverse Lake and Lime Lake, along with their tributaries, make up the Good Harbor Bay watershed. <em>-LittleTraverseLake.org</em></p>
+                    <p><b>Little Traverse</b> is a 640 acre lake located in north central Leelanau County, Cleveland Township, Michigan. Maximum depth is apx. 54ft. The lake lies just south of a portion of Sleeping Bear Dunes National Lakeshore. Little Traverse Lake and Lime Lake, along with their tributaries, make up the Good Harbor Bay watershed. <em>-LittleTraverseLake.org</em></p>
                     <div className="row flex-container">
                         {traverseCottages}
                     </div>

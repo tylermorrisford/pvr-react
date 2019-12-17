@@ -6,25 +6,18 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 require('dotenv').config();
 
-// Define middleware here
+// middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku) // ------------------ This will need to be updated before deployment
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("rental/build"));
 }
-// Add routes, both API and view
+// Routes; both API and View
 app.use(routes);
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, "rental", "build", "index.html"))
 // });
-
-// Connect to Mlab
-// const dbuser = process.env.DBUSER;
-// const dbpassword = process.env.DBPASS;
-// const MONGODB_URI = `mongodb://${dbuser}:${dbpassword}@ds353378.mlab.com:53378/heroku_96lg69gp`
-
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/peninsulavacationrentals", {
   useNewUrlParser: true,
