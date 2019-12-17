@@ -110,7 +110,8 @@ class Calendar extends Component {
                     focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
                     onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
                     orientation={isMobile ? "vertical" : "horizontal"}
-                    // verticalHeight={568}
+                    horizontalHeight={800}
+                    verticalHeight={568}
                     // isDayHighlighted={function noRefCheck() { }}
                     // isOutsideRange={function noRefCheck() { }}
                     isDayBlocked={this.isBlocked}

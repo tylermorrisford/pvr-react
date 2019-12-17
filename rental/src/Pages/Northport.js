@@ -40,12 +40,18 @@ class Northport extends Component {
             )
         } else {
             return (
+                <div>
+                <div className="northport80">
+                <div className="valign-wrapper callout">
+                  <h2>Northport</h2>
+                </div>
+              </div>
                 <div className="container">
-                    <hr />
-                    <h3>Northport</h3>
+                    <p>At the northern tip of Leelanau County, <b>Northport</b> was the gateway to Grand Traverse Bay and one of the earliest settlements in the county. Today, the village of Northport boasts a beautiful harbor and park, a full service grocery and many other stores, antique shops, and art galleries. The hills around Northport are filled with cherry and apple orchards. Leelanau State Park at the northern tip of the Leelanau Peninsula is home to the historic and well restored Grand Traverse Lighthouse. <em>-Leelanau.com</em></p>
                     <div className="row flex-container">
                         {northportCottages}
                     </div>
+                </div>
                 </div>
             )
 

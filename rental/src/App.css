@@ -69,6 +69,13 @@ input[type="cottageBathrooms"]
   background-color: #eeeeee;
 }
 
+.callout {
+  justify-content: center;
+  padding-top: 7%;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
 .leland {
   background-image: url(/assets/images/Leland.jpg);
   width: 100%;
@@ -78,11 +85,13 @@ input[type="cottageBathrooms"]
   background-size: cover;
 }
 
-.callout {
-  justify-content: center;
-  padding-top: 5%;
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
+.leland80 {
+  background-image: url(/assets/images/Leland.jpg);
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .leelanau {
@@ -94,10 +103,46 @@ input[type="cottageBathrooms"]
   background-size: cover;
 }
 
+.leelanau80 {
+  background-image: url(/assets/images/NorthLakeLeelanau.jpg);
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .northport {
   background-image: url(/assets/images/Northport-Main.jpg);
   width: 100%;
   height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.northport80 {
+  background-image: url(/assets/images/Northport-Main.jpg);
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.littletraverse80 {
+  background-image: url(/assets/images/LittleTraverse.jpg);
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lakemichigan80 {
+  background-image: url(/assets/images/LakeMichigan.jpg);
+  width: 100%;
+  height: 80vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,45 +181,5 @@ div .row > .col .s12, div .row > .col .m4 {
   text-align: center;
 }
 
-.navbar-fixed {
-  z-index: 9;
-}
 
 /* Animations */
-
-/* .fade-in {
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       /* -moz-animation: fadein 2s; Firefox < 16 */
-        /* -ms-animation: fadein 2s; Internet Explorer */
-         /* -o-animation: fadein 2s; Opera < 12.1 */
-            /* animation: fadein 2s; */
-/* } */
-
-/* @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-} */
-
-/* Firefox < 16 */
-/* @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-} */
-
-/* Safari, Chrome and Opera > 12.1 */
-/* @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-} */
-
-/* Internet Explorer */
-/* @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-} */
-
-/* Opera < 12.1 */
-/* @-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-} */

@@ -17,8 +17,8 @@ class LakeLeelanau extends Component {
 
     componentDidMount() {
         API.getCottagesLocation("Lake Leelanau")
-        .then(res => {
-            console.log(res.data)
+            .then(res => {
+                console.log(res.data)
                 this.setState({
                     cottages: res.data,
                     ready: true
@@ -43,11 +43,17 @@ class LakeLeelanau extends Component {
             )
         } else {
             return (
-                <div className="container">
-                    <hr />
-                    <h3>Lake Leelanau</h3>
-                    <div className="row flex-container">
-                        {leelanauCottages}
+                <div>
+                    <div className="leelanau80">
+                        <div className="valign-wrapper callout">
+                            <h2>Lake Leelanau</h2>
+                        </div>
+                    </div>
+                    <div className="container">
+                        <p>The village of Lake Leelanau sits along M-204 at the “narrows” between North & South Lake Leelanau, making it a prime location for boating and swimming!</p>
+                        <div className="row flex-container">
+                            {leelanauCottages}
+                        </div>
                     </div>
                 </div>
             )

@@ -17,8 +17,8 @@ class Leland extends Component {
 
     componentDidMount() {
         API.getCottagesLocation("Leland")
-        .then(res => {
-            console.log(res.data)
+            .then(res => {
+                console.log(res.data)
                 this.setState({
                     cottages: res.data,
                     ready: true
@@ -43,11 +43,22 @@ class Leland extends Component {
             )
         } else {
             return (
-                <div className="container">
-                    <h3>Leland</h3>
-                    <div className="row flex-container">
-                        {lelandCottages}
-                    </div><hr />
+                <div>
+                    <div className="leland80">
+                        <div className="valign-wrapper callout">
+                            <h2>Leland</h2>
+                        </div>
+                    </div>
+                    <div className="container">
+                        <p>Leland is a picturesque, coastal small town located on a sliver of land between Lake Michigan and Lake Leelanau, on Michigan’s Leelanau Peninsula… surrounded by incredible natural beauty, excellent amenities and charm!</p>
+
+                        <p>Leland is a great “walk around” town. All shops, restaurants, galleries, and museums are located within a short distance. You will also find easy access to public beaches, hiking trails, boat launches on each lake – with a river connecting the two.</p>
+
+                        <p>Leland’s historical district, known as Fishtown, features rustic shanties and docks reminiscent of life and commercial fishing one hundred years ago. Today, galleries and unique shops fill their walls, and charter fishing trips and the only public ferry to the popular Manitou Islands depart from those same docks. The adjacent full service marina is the perfect place for launching and mooring boats on Lake Michigan. – LelandMi.com</p>
+                        <div className="row flex-container">
+                            {lelandCottages}
+                        </div><hr />
+                    </div>
                 </div>
             )
 
