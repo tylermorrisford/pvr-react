@@ -51,7 +51,11 @@ input[type="cottageSleeps"],
 input[type="cottageSlug"],
 input[type="cottageDescription"],
 input[type="cottageBedrooms"],
-input[type="cottageBathrooms"]
+input[type="cottageBathrooms"],
+input[type="messageName"],
+input[type="messageEmail"],
+input[type="messagePhone"],
+input[type="messageBody"]
 {
   margin: 10px 0;
   padding: 0.6rem 0.5rem;
