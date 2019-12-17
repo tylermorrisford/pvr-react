@@ -16,9 +16,9 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "rental", "build", "index.html"))
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, "rental", "build", "index.html"))
+});
 
 // Connect to Mlab
 // const dbuser = process.env.DBUSER;
