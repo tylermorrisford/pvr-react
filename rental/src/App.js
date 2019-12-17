@@ -39,8 +39,8 @@ const App = () => {
       <Route exact path="/northport" component={Northport} />
       <Route exact path="/littletraverselake" component={LittleTraverseLake} />
       <Route exact path="/lakemichigan" component={LakeMichigan} />
-      <Route path="/about" component={About} />
-      <Route path="/contact" component={Contact} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/contact" component={Contact} />
       <Route exact path="/cottages/:id" component={CottagePage} />
       <Route exact path="/confirmation/:startDate/:endDate/:reservationLength/:cottageId" component={Confirmation} />
       <Route exact path="/admin" component={Admin} /> 

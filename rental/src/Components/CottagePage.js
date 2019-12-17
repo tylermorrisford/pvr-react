@@ -19,11 +19,7 @@ class CottagePage extends Component {
     componentDidMount() {
         API.getCottage(this.props.match.params.id)
             .then(res => this.setState({ cottage: res.data }))
-            .catch(err => console.log(err));
-
-        // API.getReservations(this.props.match.params.id)
-        //     .then(res => this.setState({ reservations: res.data }))
-        //     .catch(err => console.log(err));    
+            .catch(err => console.log(err));  
 
         this.setState({
             ready: true
