@@ -54,7 +54,7 @@ class Leland extends Component {
 
                         <p>Leland is a great “walk around” town. All shops, restaurants, galleries, and museums are located within a short distance. You will also find easy access to public beaches, hiking trails, boat launches on each lake – with a river connecting the two.</p>
 
-                        <p>Leland’s historical district, known as Fishtown, features rustic shanties and docks reminiscent of life and commercial fishing one hundred years ago. Today, galleries and unique shops fill their walls, and charter fishing trips and the only public ferry to the popular Manitou Islands depart from those same docks. The adjacent full service marina is the perfect place for launching and mooring boats on Lake Michigan. – LelandMi.com</p>
+                        <p>Leland’s historical district, known as Fishtown, features rustic shanties and docks reminiscent of life and commercial fishing one hundred years ago. Today, galleries and unique shops fill their walls, and charter fishing trips and the only public ferry to the popular Manitou Islands depart from those same docks. The adjacent full service marina is the perfect place for launching and mooring boats on Lake Michigan. <em>– LelandMi.com</em></p>
                         <div className="row flex-container">
                             {lelandCottages}
                         </div><hr />

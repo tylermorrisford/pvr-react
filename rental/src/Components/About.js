@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
     return(  
         <div>
-            <div className="leelanau">
+            <div className="leelanau80">
               <div className="valign-wrapper callout">
                 <h2>About</h2>
               </div>
