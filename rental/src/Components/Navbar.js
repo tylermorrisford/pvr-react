@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-// import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { Navbar, Icon, NavItem, Dropdown } from 'react-materialize';
 
@@ -45,6 +45,7 @@ options={{
   }}
   trigger={<a href="#!">Destinations{' '}<Icon right>arrow_drop_down</Icon></a>}
 >
+    {/* <Link to={'/leland'} id="navItem" /> */}
   <a id="navItem" href="/leland">
     Leland
   </a>
@@ -64,6 +65,7 @@ options={{
 <NavItem id="navItem" href="/all-rentals">
   All Rentals
 </NavItem>
+<NavLink id="navItem" to="/all-rentals">NEW All Rentals</NavLink>
 <NavItem id="navItem" href="/about">
   About
 </NavItem>
