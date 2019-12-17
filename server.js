@@ -11,14 +11,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku) // ------------------ This will need to be updated before deployment
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("rental/build"));
+  app.use('/static', express.static(path.join(__dirname, "rental/build")));
 }
 // Add routes, both API and view
 app.use(routes);
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, "rental", "build", "index.html"))
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "rental", "build", "index.html"))
+// });
 
 // Connect to Mlab
 // const dbuser = process.env.DBUSER;
