@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import { Navbar, Icon, NavItem, Dropdown } from 'react-materialize';
+import { Navbar, Icon, Dropdown } from 'react-materialize';
 
 class NavbarM extends Component {
 
@@ -45,33 +45,16 @@ options={{
   }}
   trigger={<a href="#!">Destinations{' '}<Icon right>arrow_drop_down</Icon></a>}
 >
-    {/* <Link to={'/leland'} id="navItem" /> */}
-  <a id="navItem" href="/leland">
-    Leland
-  </a>
-  <a id="navItem" href="/lakeleelanau">
-    Lake Leelanau
-  </a>
-  <a id="navItem" href="/northport">
-    Northport
-  </a>
-  <a id="navItem" href="/lakemichigan">
-    Lake Michigan
-  </a>
-  <a id="navItem" href="/littletraverselake">
-    Little Traverse Lake
-  </a>
+  <NavLink id="navItem" to="/leland">Leland</NavLink>
+  <NavLink id="navItem" to="/lakeleelanau">Lake Leelanau</NavLink>
+  <NavLink id="navItem" to="/northport">Northport</NavLink>
+  <NavLink id="navItem" to="/lakemichigan">Lake Michigan</NavLink>
+  <NavLink id="navItem" to="/littletraverselake">Little Traverse Lake</NavLink>
 </Dropdown>
-<NavItem id="navItem" href="/all-rentals">
-  All Rentals
-</NavItem>
-<NavLink id="navItem" to="/all-rentals">NEW All Rentals</NavLink>
-<NavItem id="navItem" href="/about">
-  About
-</NavItem>
-<NavItem id="navItem" href="/contact">
-  Contact
-</NavItem>
+<NavLink id="navItem" to="/all-rentals">All Rentals</NavLink>
+<NavLink id="navItem" to="/about">About</NavLink>
+<NavLink id="navItem" to="/contact">Contact</NavLink>
+
 </Navbar>
 
         )
