@@ -16,7 +16,7 @@ class LakeLeelanau extends Component {
     }
 
     componentDidMount() {
-        API.getCottagesLocation("LakeLeelanau")
+        API.getCottagesLocation("Lake Leelanau")
         .then(res => {
             console.log(res.data)
                 this.setState({
