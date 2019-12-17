@@ -57,7 +57,7 @@ class Calendar extends Component {
             this.setState({
                 reservationStart: resStart,
                 reservationEnd: resEnd,
-                reservationLength: resLength - 1
+                reservationLength: resLength
             });
 
 
@@ -93,7 +93,7 @@ class Calendar extends Component {
             )
         }
 
-
+        const isMobile = window.innerWidth < 601;
 
         return (
             <div>
@@ -109,7 +109,7 @@ class Calendar extends Component {
                     startDatePlaceholderText=" Check-in"
                     focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
                     onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-                    orientation="horizontal"
+                    orientation={isMobile ? "vertical" : "horizontal"}
                     // verticalHeight={568}
                     // isDayHighlighted={function noRefCheck() { }}
                     // isOutsideRange={function noRefCheck() { }}
@@ -141,9 +141,17 @@ class Calendar extends Component {
                         startingTop: '4%'
                     }}
                     trigger={<Button style={{ display: 'hidden' }} ref={button => this.modalButton = button} node="button">Reserve these dates</Button>}>
-                    <div className="container"><h5>Your stay at {this.props.data.cottageName}:</h5>
-                        <h6>Check-in: {this.state.reservationStart ? this.state.reservationStart.format('MM-DD-YYYY') : "No check-in dates selected"} || Check-out: {this.state.reservationEnd ? this.state.reservationEnd.format('MM-DD-YYYY') : "No check-out dates selected"}</h6>
-                        <h6>Reservation total ${(this.props.data.cottagePerNight * this.state.reservationLength)}</h6>
+                    <div className="container">
+                        {/* <div className="row"> */}
+                            {/* <div className="col s12 m6"> */}
+                                <h5>Your stay at {this.props.data.cottageName}:</h5>
+                                <h6>Check-in: 4 PM on {this.state.reservationStart ? this.state.reservationStart.format('MM-DD-YYYY') : "No check-in dates selected"}<br />Check-out: 10 AM on {this.state.reservationEnd ? this.state.reservationEnd.format('MM-DD-YYYY') : "No check-out dates selected"}</h6>
+                                <h6>Reservation Subtotal ${(this.props.data.cottagePerNight * this.state.reservationLength)}</h6>
+                            {/* </div> */}
+                            {/* <div className="col s12 m6">
+
+                            </div> */}
+                        {/* </div> */}
                     </div>
                 </Modal>
 

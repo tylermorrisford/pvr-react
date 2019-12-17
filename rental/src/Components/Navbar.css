@@ -7,7 +7,40 @@ nav .active {
     color: #555555;
 }
 
-nav {
+.navbar {
     overflow: hidden;
     z-index: 1;
+    background-color: white;
+    border-bottom: 1px solid #999999;
+    font-family: 'Montserrat', sans-serif;
+    overflow: visible;
+}
+
+a, #navItem, #dropdown {
+    color: #555555 !important;
+}
+
+#brand {
+    color: #555555;
+    padding-left: 10px;
+}
+
+#sidenav-overlay { 
+    z-index: 2; 
+}
+
+@media only screen and (max-width: 820px) {
+    #brand {
+        color: #555555;
+        padding-left: 0;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    #brand {
+        color: #555555;
+        padding-left: 0;
+        font-size: 0.9em;
+    }
 }

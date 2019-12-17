@@ -29,6 +29,15 @@ footer {
   margin: 0 10px;
 }
 
+.center {
+  text-align: center;
+}
+
+.hr {
+  width: 50%;
+  text-align: center;
+}
+
 li {
   line-height: 4;
 }

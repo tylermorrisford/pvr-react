@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import Nabvar from "./Components/Navbar";
+import Nav from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Destinations from "./Pages/Destinations";
 import ViewAll from "./Pages/ViewAll";
@@ -12,10 +12,10 @@ import Footer from "./Components/Footer";
 import Confirmation from "./Pages/Confirmation";
 import Admin from "./Pages/Admin";
 import Leland from './Pages/Leland';
-// import LakeLeelanau from './Pages/LakeLeelanau';
-// import Northport from './Pages/Northport';
-// import LittleTraverseLake from './Pages/LittleTraverseLake';
-// import LakeMichigan from "./Pages/LakeMichigan";
+import LakeLeelanau from './Pages/LakeLeelanau';
+import Northport from './Pages/Northport';
+import LittleTraverseLake from './Pages/LittleTraverseLake';
+import LakeMichigan from "./Pages/LakeMichigan";
 
 
 const Contact = () => {
@@ -29,16 +29,16 @@ const Contact = () => {
 const App = () => {
   return (
     <Router>
-      <Nabvar />
+      <Nav />
       <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/destinations" component={Destinations} />
       <Route exact path="/all-rentals" component={ViewAll} />
       <Route exact path="/leland" component={Leland} />
-      {/* <Route exact path="/lakeleelanau" component={LakeLeelanau} /> */}
-      {/* <Route exact path="/northport" component={Northport} /> */}
-      {/* <Route exact path="/littletraverselake" component={LittleTraverseLake} /> */}
-      {/* <Route exact path="/lakemichigan" component={LakeMichigan} /> */}
+      <Route exact path="/lakeleelanau" component={LakeLeelanau} />
+      <Route exact path="/northport" component={Northport} />
+      <Route exact path="/littletraverselake" component={LittleTraverseLake} />
+      <Route exact path="/lakemichigan" component={LakeMichigan} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route exact path="/cottages/:id" component={CottagePage} />
