@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { Navbar, Icon, Dropdown } from 'react-materialize';
@@ -7,59 +7,59 @@ class NavbarM extends Component {
 
     render() {
 
-        return(
+        return (
             <Navbar
-className='navbar'          
-alignLinks="right"
-brand={<a id="brand" className="brand-logo" href="/">Peninsula Vacation Rentals</a>}
-menuIcon={<Icon>menu</Icon>}
-options={{
-  draggable: true,
-  edge: 'left',
-  inDuration: 250,
-  onCloseEnd: null,
-  onCloseStart: null,
-  onOpenEnd: null,
-  onOpenStart: null,
-  outDuration: 200,
-  preventScrolling: true,
-  fixed: true
-}}
->
-<Dropdown
-  id="dropdown"
-  options={{
-    alignment: 'left',
-    autoTrigger: true,
-    closeOnClick: true,
-    constrainWidth: true,
-    container: false,
-    coverTrigger: true,
-    hover: false,
-    inDuration: 150,
-    onCloseEnd: null,
-    onCloseStart: null,
-    onOpenEnd: null,
-    onOpenStart: null,
-    outDuration: 250
-  }}
-  trigger={<a href="#!">Destinations{' '}<Icon right>arrow_drop_down</Icon></a>}
->
-  <NavLink id="navItem" to="/leland">Leland</NavLink>
-  <NavLink id="navItem" to="/lakeleelanau">Lake Leelanau</NavLink>
-  <NavLink id="navItem" to="/northport">Northport</NavLink>
-  <NavLink id="navItem" to="/lakemichigan">Lake Michigan</NavLink>
-  <NavLink id="navItem" to="/littletraverselake">Little Traverse Lake</NavLink>
-</Dropdown>
-<NavLink id="navItem" to="/all-rentals">All Rentals</NavLink>
-<NavLink id="navItem" to="/about">About</NavLink>
-<NavLink id="navItem" to="/contact">Contact</NavLink>
+                fixed
+                className='navbar'
+                alignLinks="right"
+                brand={<a id="brand" className="brand-logo" href="/">Peninsula Vacation Rentals</a>}
+                menuIcon={<Icon>menu</Icon>}
+                options={{
+                    draggable: true,
+                    edge: 'left',
+                    inDuration: 250,
+                    onCloseEnd: null,
+                    onCloseStart: null,
+                    onOpenEnd: null,
+                    onOpenStart: null,
+                    outDuration: 200,
+                    preventScrolling: true,
+                }}
+            >
+                <Dropdown
+                    id="dropdown"
+                    options={{
+                        alignment: 'left',
+                        autoTrigger: true,
+                        closeOnClick: true,
+                        constrainWidth: true,
+                        container: false,
+                        coverTrigger: true,
+                        hover: false,
+                        inDuration: 150,
+                        onCloseEnd: null,
+                        onCloseStart: null,
+                        onOpenEnd: null,
+                        onOpenStart: null,
+                        outDuration: 250
+                    }}
+                    trigger={<a href="#!">Destinations{' '}<Icon right>arrow_drop_down</Icon></a>}
+                >
+                    <NavLink id="navItem" to="/leland">Leland</NavLink>
+                    <NavLink id="navItem" to="/lakeleelanau">Lake Leelanau</NavLink>
+                    <NavLink id="navItem" to="/northport">Northport</NavLink>
+                    <NavLink id="navItem" to="/lakemichigan">Lake Michigan</NavLink>
+                    <NavLink id="navItem" to="/littletraverselake">Little Traverse Lake</NavLink>
+                </Dropdown>
+                <NavLink id="navItem" to="/all-rentals">All Rentals</NavLink>
+                <NavLink id="navItem" to="/about">About</NavLink>
+                <NavLink id="navItem" to="/contact">Contact</NavLink>
 
-</Navbar>
-
+            </Navbar>
         )
     }
 }
+
 export default NavbarM
 
 

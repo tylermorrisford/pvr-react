@@ -9,7 +9,6 @@ nav .active {
 
 .navbar {
     overflow: hidden;
-    z-index: 1;
     background-color: white;
     border-bottom: 1px solid #999999;
     font-family: 'Montserrat', sans-serif;
