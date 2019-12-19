@@ -1,8 +1,7 @@
-
 import React, { Component} from "react";
-import { Link } from 'react-router-dom';
-import moment from 'moment';
-import { Modal, Button } from 'react-materialize';
+// import { Link } from 'react-router-dom';
+// import moment from 'moment';
+// import { Modal, Button } from 'react-materialize';
 import ReservationCard from "../Components/ReservationCard";
 import API from '../utils/API';
 // import stripe
@@ -22,7 +21,8 @@ class Confirmation extends Component {
             reservationStart: null,
             reservationEnd: null,
             reservationLength: null,
-            reservationCost: null
+            reservationCost: null,
+            reservationTotal: null,
         }
     }
     // methods for calculation
@@ -53,13 +53,21 @@ class Confirmation extends Component {
         // API.saveReservation(reservation)
         // .catch(err => console.log(err));
 
+        const resSubtotal = this.state.reservationLength === 7 ? this.state.cottage.cottagePerWeek : this.state.reservationLength * this.state.cottage.cottagePerNight;
+        const tax = parseFloat((resSubtotal * 0.06).toFixed(2));
+        const resGrandTotal = resSubtotal + 125 + tax + 25;
         this.setState({
-            ready: true
+            reservationTotal: resGrandTotal
         })
 
     }
 
+    handleSubmit(){
+        alert('Your payment is being processed. Thank you!')
+    }
     render() {
+
+        console.log('this.state(conf) :  ', this.state )
 
         if (!this.state.ready) {
             // spinner "circle-notch"
@@ -80,11 +88,14 @@ class Confirmation extends Component {
                         <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
                             <div className="example">
                                 <h5>Enter your payment details</h5>
+                                {/* <p>Your stay totals: ${this.state.reservationTotal}</p> */}
                                 <Elements>
                                     <CheckoutForm />
                                 </Elements>
                             </div>
                         </StripeProvider>
+                        <button className="btn waves-light blue" onClick={this.handleSubmit}>Book Your Stay ></button>
+
                     </div>
                 </div>
             </div>

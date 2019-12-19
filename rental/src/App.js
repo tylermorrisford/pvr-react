@@ -1,9 +1,8 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React , {Component} from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-import Destinations from "./Pages/Destinations";
 import ViewAll from "./Pages/ViewAll";
 import NoMatch from "./Pages/NoMatch";
 import About from "./Components/About";
@@ -17,15 +16,23 @@ import LakeLeelanau from './Pages/LakeLeelanau';
 import Northport from './Pages/Northport';
 import LittleTraverseLake from './Pages/LittleTraverseLake';
 import LakeMichigan from "./Pages/LakeMichigan";
+import LoginFail from './Pages/LoginFail';
+import Callback from './Pages/Callback';
+
+
+class App extends Component{
+  constructor(props){
+    super(props)
+  }
+
 
 // Add Auth0 on Admin route
-const App = () => {
+render() {
   return (
-    <Router>
+    <Router >
       <Navbar />
       <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/destinations" component={Destinations} />
       <Route exact path="/all-rentals" component={ViewAll} />
       <Route exact path="/leland" component={Leland} />
       <Route exact path="/lakeleelanau" component={LakeLeelanau} />
@@ -36,12 +43,16 @@ const App = () => {
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/cottages/:id" component={CottagePage} />
       <Route exact path="/confirmation/:startDate/:endDate/:reservationLength/:cottageId" component={Confirmation} />
-      <Route exact path="/admin" component={Admin} /> 
+      <Route exact path="/callback" component={Callback} />
+      <Route exact path="/fail" component={LoginFail} />
+      <Route exact path="/admin" component={Admin} />
+      {/* <Route exact path="/admin" render={() => this.props.auth.isAuthenticated ? <Admin /> : <Redirect to="/fail" />} /> */}
       <Route component={NoMatch} />
       </Switch>
       <Footer />
     </Router>
   );
+}
 }
 
 export default App;
