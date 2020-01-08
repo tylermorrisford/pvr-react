@@ -3,7 +3,7 @@
 A single-page Mern App for a vacation property rental business(build in progress)
 [Check out the app>](https://peninsulavacationrentals.herokuapp.com/)
 
-![Screen1](rental/assets/images/screenshot.png)
+![image](https://user-images.githubusercontent.com/49931992/71942564-e1a9e380-317a-11ea-9d51-e45df5bbae87.png)
 
 
 ## Index
