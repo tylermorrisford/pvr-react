@@ -19,7 +19,7 @@ app.use(routes);
 //   res.sendFile(path.resolve(__dirname, "rental", "build", "index.html"))
 // });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/peninsulavacationrentals", {
+mongoose.connect(process.env.DB_URI || "mongodb://localhost/peninsulavacationrentals", {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
