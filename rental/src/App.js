@@ -1,4 +1,4 @@
-import React , {Component} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 import Navbar from "./Components/Navbar";
@@ -20,14 +20,11 @@ import LoginFail from './Pages/LoginFail';
 import Callback from './Pages/Callback';
 
 
-class App extends Component{
-  constructor(props){
-    super(props)
-  }
+const App = () => {
 
+  // Add private routes
+  // fix router issue where typing route into url loads a blank page
 
-// Add Auth0 on Admin route
-render() {
   return (
     <Router >
       <Navbar />
@@ -46,13 +43,11 @@ render() {
       <Route exact path="/callback" component={Callback} />
       <Route exact path="/fail" component={LoginFail} />
       <Route exact path="/admin" component={Admin} />
-      {/* <Route exact path="/admin" render={() => this.props.auth.isAuthenticated ? <Admin /> : <Redirect to="/fail" />} /> */}
       <Route component={NoMatch} />
       </Switch>
       <Footer />
     </Router>
   );
-}
 }
 
 export default App;
